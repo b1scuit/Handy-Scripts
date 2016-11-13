@@ -15,6 +15,7 @@ txtrst=$(tput sgr0)      # Text reset
 # Use them as
 echo "${txtbld}This is bold text output from shell script${txtrst}\n"
 echo "${txtred}This is coloured red except\n${txtblu}This is blue${txtrst}"
+echo "${txtgrn}Green Text\n${txtylw}Yellow text\n${txtpur}Purple text\n${txtcyn}Cyan text${txtrst}"
 
 ## reset the terminal
 echo "${txtrst} \n"
