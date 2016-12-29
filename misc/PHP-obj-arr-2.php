@@ -42,7 +42,7 @@ class User {
   }
 
   private function getInfo(){
-    // Init MySQL connection
+    // Init MySQL connection (This has to be here because of encapsulation $conn cannot be used)
     $mysql = new mysqli('localhost', 'root', '', 'testDB');
 
     // Create and runa  query, there is no user input so MySQL injection protection is not needed
@@ -55,6 +55,9 @@ class User {
 
     // Give the data back
     return $res->fetch_assoc();
+
+    // Close MySQL connection
+    $mysql->close();
 
   }
 
@@ -82,6 +85,10 @@ if ($conn->connect_error) {
 
 // Get a list of all the usernames in the database
 $res = $conn->query('select username from users');
+
+// Close MySQL connection
+$conn->close();
+
 
 // Get the results
 if ($res->num_rows > 0) {
