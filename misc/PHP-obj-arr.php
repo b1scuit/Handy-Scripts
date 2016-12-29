@@ -5,11 +5,8 @@
 class Animal {
 
   public $noOfLegs;
-
   public $noOfEyes;
-
   public $name;
-
 
   public function __construct($name){
     $this->name = $name;
