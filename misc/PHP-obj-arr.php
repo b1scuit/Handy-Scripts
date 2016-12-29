@@ -55,4 +55,6 @@ foreach($arrayOfObjects as $object){
   echo '<p>A ' . $object->name . ' has ' . $object->noOfEyes . ' eyes and ' . $object->noOfLegs . ' legs.</p>';
 }
 
+echo $arrayOfObjects['Cow']->noOfLegs;
+
 ?>
