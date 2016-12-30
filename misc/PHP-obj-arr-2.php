@@ -18,60 +18,14 @@ INSERT INTO `testDB`.`users` (`id`, `username`, `firstname`, `surname`, `role`) 
 
  */
 
-// Creating a user class
-class User {
-
-  public function __construct($data){
-
-    // Turn all the MySQL fields into properties
-    foreach($data as $key => $value){
-      $this->{$key} = $value;
-    }
-
-    // Declare any alias fields
-    $aliases = [
-      'full_name' => $this->firstname . ' ' . $this->surname
-    ];
-
-    // Create any alias fields we would want
-    $this->genAlias($aliases);
-
-  }
-
-  // Create an alias field (A field that's made of other fields and
-  //  dosn't actully exist, you can just pretend it does)
-  public function genAlias($aliasArr){
-
-    // Generate any alias fields we may want
-    foreach($aliasArr as $name => $value){
-      $this->{$name} = $value;
-    }
-
-    return true;
-  }
-
-  // Check if the user is a member of the admin role
-  public function isAdmin(){
-
-    // If there's nothing in role, just send back no
-    if(!$this->role) return false;
-
-    // If there is generate a boolean value from comparing the role to the admin string
-    return (bool) ($this->role == 'Admin');
-  }
-}
-
+// Include the user class
+include('lib/User.php');
 
 // Empty array initalized
 $arrayOfUsers = [];
 
 // Creating a MySQLi class
 $conn = new mysqli('localhost', 'newuser', '', 'testDB');
-
-// Check you can connect
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Get a list of all the users in the database
 $res = $conn->query('select * from users');
@@ -89,7 +43,7 @@ if ($res->num_rows > 0) {
 
 // What you would use this for (List users, articals, comments etc..)
 foreach($arrayOfUsers as $object){
-  if($object->isAdmin()){
+  if($object->isAdmin){
     echo '<p>' . $object->full_name .' is an admin</p>';
   } else {
     echo '<p>' . $object->full_name .' is not an admin</p>';
