@@ -20,49 +20,27 @@ INSERT INTO `testDB`.`users` (`id`, `username`, `full_name`, `role`) VALUES (DEF
 
 // Creating a user class
 class User {
-  public $username;
-  public $fullName;
-  public $role;
 
-  public function __construct($username){
+  public function __construct($data){
 
-    // Set the inital username so it is accessable across the class
-    $this->username = $username;
-
-    // Get the users info
-    $info = $this->getInfo();
-
-    // If info came back with anything
-    if($info){
-      // Assemble data
-      $this->username = $info['username'];
-      $this->fullName = $info['full_name'];
-      $this->role = $info['role'];
+    // Turn all the MySQL fields into properties
+    foreach($data as $key => $value){
+      $this->{$key} = $value;
     }
+    // Create any alias fields we would want
+    $this->genFullName();
+
   }
 
-  private function getInfo(){
-    // Init MySQL connection (This has to be here because of encapsulation $conn cannot be used)
-    $mysql = new mysqli('localhost', 'root', '', 'testDB');
-
-    // Create and runa  query, there is no user input so MySQL injection protection is not needed
-    $res = $mysql->query('select * from users where username = "' . $this->username . '"');
-
-    // Organise the data and return the result
-    if(!$res) {
-      return false;
-    }
-
-    // Give the data back
-    return $res->fetch_assoc();
-
-    // Close MySQL connection
-    $mysql->close();
-
+  public function genFullName(){
+    $this->{'full_name'} = $this->firstname . ' ' . $this->surname;
+    return true;
   }
+
 
   // Check if the user is a member of the admin role
   public function isAdmin(){
+
     // If there's nothing in role, just send back no
     if(!$this->role) return false;
 
@@ -76,37 +54,38 @@ class User {
 $arrayOfUsers = [];
 
 // Creating a MySQLi class
-$conn = new mysqli('localhost', 'root', '', 'testDB');
+$conn = new mysqli('localhost', 'newuser', '', 'testDB');
 
 // Check you can connect
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Get a list of all the usernames in the database
-$res = $conn->query('select username from users');
+// Get a list of all the users in the database
+$res = $conn->query('select * from users');
 
 // Close MySQL connection
 $conn->close();
+
 
 
 // Get the results
 if ($res->num_rows > 0) {
     // output data of each row
     while($userData = $res->fetch_assoc()) {
-      $arrayOfUsers[$userData['username']] = new User($userData['username']);
+      $arrayOfUsers[$userData['username']] = new User($userData);
     }
 }
 
 // What you would use this for (List users, articals, comments etc..)
 foreach($arrayOfUsers as $object){
   if($object->isAdmin()){
-    echo '<p>' . $object->fullName .' is an admin</p>';
+    echo '<p>' . $object->full_name .' is an admin</p>';
   } else {
-    echo '<p>' . $object->fullName .' is not an admin</p>';
+    echo '<p>' . $object->full_name .' is not an admin</p>';
   }
 }
 
 // Using this to echo a perticular object's value from the array
-
+$array
 ?>
