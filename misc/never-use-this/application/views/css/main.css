@@ -1,0 +1,70 @@
+
+@import url(http://fonts.googleapis.com/css?family=Cantora+One);
+a:link { text-decoration:underline; color:#FFF;}
+a:visited{ text-decoration:underline; color:#FFF;}
+a:hover{ text-decoration:underline; color:#FFF;}
+a:active { text-decoration:underline; color:#FFF;}
+body{
+	background:#000 url('/application/views/css/images/Bottles.jpg') no-repeat fixed center top; 
+}
+#Wrapper { 
+	width:768px; 
+	font-family: 'Cantora One', sans-serif;
+	margin:0px auto;
+}
+.Title{ 
+	padding:15px;
+	width:100%; 
+	height:100px; 
+	float:left; 
+	background:#000 url('/application/views/css/images/SwipeT.jpg') no-repeat right top; 
+	padding:15px;
+	border:2px solid white;
+	margin:5px auto;
+	border-radius:25px;
+}
+.Title h1 { margin:5px 50px 0px 0px; float:left; color:#FFF; font-size:20px; } 
+.Content {
+	width:100%;
+	float:left;
+	background:#000;
+	color:#FFF;
+	border-radius:25px;
+	padding:15px;
+	border:2px solid white;
+	margin:5px auto;
+}
+.Menu {
+	width:100%;
+	float:left;
+	background:#000;
+	border-radius:25px;
+	padding:15px;
+	border:2px solid white;
+	margin:5px auto;
+}
+.Footer {
+	width:100%;
+	float:left;
+	background:#000;
+	color:#FFF;
+	border-radius:25px;
+	padding:15px;
+	border:2px solid white;
+	margin:5px auto;
+}
+.Menu ul { list-style-type:none;}
+.Menu li { display:inline;  margin-right:15px;}
+.Footer p  { margin-left:15px; float:left;}
+.Content p {float:left; 	font-size:15px; width:100%; text-align:justify;}
+.Content h3 {float:left; width:100%; }
+.Content img { display: block; margin-left: auto; margin-right: auto; }
+.Files ul { float:left; width:15%; } 
+.Files li {  height:32px; }
+.Content form  {  float:left; width:100%;}
+.FolderIcon {	background:#000 url('/application/views/css/images/Folder.png') no-repeat left top; width:100%; height:32px;} 
+.FolderIcon p {	float:left;} 
+.FileIcon {	background:#000 url('/application/views/css/images/File.png') no-repeat right top; width:32px; height:32px;} 
+
+.Spacer1{ width:100%; height:20px; float:left;}
+.Important { width:100%; text-align:center; color:#FF0000; float:left; font-size:18px; }

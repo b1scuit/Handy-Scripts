@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^([A-Za-z0-9]+)$ index.php?Class=$1
+RewriteRule ^([A-Za-z0-9]+)/([A-Za-z0-9]+)$ index.php?Class=$1&Method=$2
+RewriteRule ^([A-Za-z0-9]+)/([A-Za-z0-9]+)/([A-Za-z0-9]+)$ index.php?Class=$1&Method=$2&String=$3
