@@ -6,9 +6,7 @@ class controllerClass {
   public function __construct($data){
 
     // Turn all the MySQL fields into properties
-    foreach($data as $key => $value){
-      $this->{$key} = $value;
-    }
+    $this->genAlias($data);
 
     return true;
   }
