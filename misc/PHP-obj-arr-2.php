@@ -12,9 +12,9 @@ CREATE TABLE IF NOT EXISTS `testDB`.`users` (
 `full_name` VARCHAR(45) NULL DEFAULT NULL,
 `role` VARCHAR(45) NULL DEFAULT NULL);
 
-INSERT INTO `testDB`.`users` (`id`, `username`, `full_name`, `role`) VALUES (DEFAULT, 'Person1', 'Person one', 'Admin');
-INSERT INTO `testDB`.`users` (`id`, `username`, `full_name`, `role`) VALUES (DEFAULT, 'Person2', 'Person Two', 'Moderator');
-INSERT INTO `testDB`.`users` (`id`, `username`, `full_name`, `role`) VALUES (DEFAULT, 'Person3', 'Person Three', 'User');
+INSERT INTO `testDB`.`users` (`id`, `username`, `firstname`, `surname`, `role`) VALUES (DEFAULT, 'Person1', 'Person', 'One', 'Admin');
+INSERT INTO `testDB`.`users` (`id`, `username`, `firstname`, `surname`, `role`) VALUES (DEFAULT, 'Person2', 'Person', 'Two', 'Moderator');
+INSERT INTO `testDB`.`users` (`id`, `username`, `firstname`, `surname`, `role`) VALUES (DEFAULT, 'Person3', 'Person', 'Three', 'User');
 
  */
 
@@ -32,7 +32,11 @@ class User {
 
   }
 
+  // Create an alias field (A field that's made of other fields and
+  //  dosn't actully exist, you can just pretend it does)
   public function genFullName(){
+
+    // Create a property called full name and populate this with the first and last name
     $this->{'full_name'} = $this->firstname . ' ' . $this->surname;
     return true;
   }
