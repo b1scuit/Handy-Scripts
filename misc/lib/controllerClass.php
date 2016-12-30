@@ -9,6 +9,8 @@ class controllerClass {
     foreach($data as $key => $value){
       $this->{$key} = $value;
     }
+
+    return true;
   }
 
   // Create alias fields (A field that's made of other fields and
