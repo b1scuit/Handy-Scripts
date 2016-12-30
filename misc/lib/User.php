@@ -12,6 +12,8 @@ class User extends controllerClass {
     $this->genAlias([
       'full_name' => $this->firstname . ' ' . $this->surname,
       'isAdmin' => (bool) ($this->role == 'Admin'),
+      'isMod' => (bool) ($this->role == 'Moderator'),
+      'isUser' => (bool) ($this->role == 'User')
     ]);
 
   }

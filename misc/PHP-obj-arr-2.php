@@ -44,9 +44,15 @@ if ($res->num_rows > 0) {
 // What you would use this for (List users, articals, comments etc..)
 foreach($arrayOfUsers as $object){
   if($object->isAdmin){
-    echo '<p>' . $object->full_name .' is an admin</p>';
+    echo '<p>' . $object->full_name .' is an Admin</p>';
+  }
+  else if($object->isMod) {
+    echo '<p>' . $object->full_name .' is a Moderator</p>';
+  }
+  else if($object->isUser){
+    echo '<p>' . $object->full_name .' is a User</p>';
   } else {
-    echo '<p>' . $object->full_name .' is not an admin</p>';
+    echo '<p>' . $object->full_name .' is unidentifyable </p>';
   }
 }
 
