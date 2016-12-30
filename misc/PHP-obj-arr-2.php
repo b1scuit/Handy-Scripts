@@ -27,20 +27,28 @@ class User {
     foreach($data as $key => $value){
       $this->{$key} = $value;
     }
+
+    // Declare any alias fields
+    $aliases = [
+      'full_name' => $this->firstname . ' ' . $this->surname
+    ];
+
     // Create any alias fields we would want
-    $this->genFullName();
+    $this->genAlias($aliases);
 
   }
 
   // Create an alias field (A field that's made of other fields and
   //  dosn't actully exist, you can just pretend it does)
-  public function genFullName(){
+  public function genAlias($aliasArr){
 
-    // Create a property called full name and populate this with the first and last name
-    $this->{'full_name'} = $this->firstname . ' ' . $this->surname;
+    // Generate any alias fields we may want
+    foreach($aliasArr as $name => $value){
+      $this->{$name} = $value;
+    }
+
     return true;
   }
-
 
   // Check if the user is a member of the admin role
   public function isAdmin(){
@@ -70,8 +78,6 @@ $res = $conn->query('select * from users');
 
 // Close MySQL connection
 $conn->close();
-
-
 
 // Get the results
 if ($res->num_rows > 0) {
