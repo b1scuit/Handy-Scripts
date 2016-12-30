@@ -43,6 +43,7 @@ if ($res->num_rows > 0) {
 
 // What you would use this for (List users, articals, comments etc..)
 foreach($arrayOfUsers as $object){
+
   if($object->isAdmin){
     echo '<p>' . $object->full_name .' is an Admin</p>';
   }
@@ -51,9 +52,11 @@ foreach($arrayOfUsers as $object){
   }
   else if($object->isUser){
     echo '<p>' . $object->full_name .' is a User</p>';
-  } else {
+  }
+  else {
     echo '<p>' . $object->full_name .' is unidentifyable </p>';
   }
+
 }
 
 // Using this to echo a perticular object's value from the array
