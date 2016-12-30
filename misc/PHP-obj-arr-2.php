@@ -39,7 +39,7 @@ foreach($arrayOfUsers as $object){
     echo '<p>' . $object->full_name .' is a User</p>';
   }
   else {
-    echo '<p>' . $object->full_name .' is unidentifyable </p>';
+    echo '<p>' . $object->full_name .' is unidentifiable </p>';
   }
 
 }
