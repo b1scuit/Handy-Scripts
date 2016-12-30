@@ -51,5 +51,5 @@ foreach($arrayOfUsers as $object){
 }
 
 // Using this to echo a perticular object's value from the array
-$array
+echo 'Id of admin user : ' . $arrayOfUsers['Person1']->id;
 ?>
