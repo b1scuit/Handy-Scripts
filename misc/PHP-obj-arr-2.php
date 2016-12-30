@@ -45,5 +45,7 @@ foreach($arrayOfUsers as $object){
 }
 
 // Using this to echo a perticular object's value from the array
-echo 'ID of admin user : ' . $arrayOfUsers['Person1']->id;
+//  readableDate is actully a function in the User class that behaves like a
+//  property, this means more complex manipulations can be done
+echo 'Date of creation for Person1 : ' . $arrayOfUsers['Person1']->readableDate;
 ?>

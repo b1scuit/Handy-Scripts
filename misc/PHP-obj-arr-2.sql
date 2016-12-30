@@ -6,8 +6,9 @@ CREATE TABLE IF NOT EXISTS `testDB`.`users` (
 `username` VARCHAR(45) NULL DEFAULT NULL,
 `firstname` VARCHAR(45) NULL DEFAULT NULL,
 `surname` VARCHAR(45) NULL DEFAULT NULL,
-`role` VARCHAR(45) NULL DEFAULT NULL);
+`role` VARCHAR(45) NULL DEFAULT NULL,
+`created` INT NULL DEFAULT NULL);
 
-INSERT INTO `testDB`.`users` (`id`, `username`, `firstname`, `surname`, `role`) VALUES (DEFAULT, 'Person1', 'Person', 'One', 'Admin');
-INSERT INTO `testDB`.`users` (`id`, `username`, `firstname`, `surname`, `role`) VALUES (DEFAULT, 'Person2', 'Person', 'Two', 'Moderator');
-INSERT INTO `testDB`.`users` (`id`, `username`, `firstname`, `surname`, `role`) VALUES (DEFAULT, 'Person3', 'Person', 'Three', 'User');
+INSERT INTO `testDB`.`users` (`id`, `username`, `firstname`, `surname`, `role`, `created`) VALUES (DEFAULT, 'Person1', 'Person', 'One', 'Admin', 1483105206);
+INSERT INTO `testDB`.`users` (`id`, `username`, `firstname`, `surname`, `role`, `created`) VALUES (DEFAULT, 'Person2', 'Person', 'Two', 'Moderator', 1483105106);
+INSERT INTO `testDB`.`users` (`id`, `username`, `firstname`, `surname`, `role`, `created`) VALUES (DEFAULT, 'Person3', 'Person', 'Three', 'User', 1483105159);
