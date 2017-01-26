@@ -4,48 +4,17 @@
 */
 
 // Include the user class
-include('lib/User.php');
+include('lib/loader.php');
 
-// Empty array initalized
-$arrayOfUsers = [];
+$user = new users();
 
-// Creating a MySQLi class
-$conn = new mysqli('localhost', 'newuser', '', 'testDB');
+$user->get(['pk' => '1']);
 
-// Get a list of all the users in the database
-$res = $conn->query('select * from users');
+echo $user->full_name;
 
-// Close MySQL connection
-$conn->close();
 
-// Get the results
-if ($res->num_rows > 0) {
-    // output data of each row
-    while($userData = $res->fetch_assoc()) {
-      $arrayOfUsers[$userData['username']] = new User($userData);
-    }
-}
+echo '<pre>';
+print_r($user);
+echo '</pre>';
 
-// What you would use this for (List users, articals, comments etc..)
-foreach($arrayOfUsers as $object){
-
-  if($object->isAdmin){
-    echo '<p>' . $object->full_name .' is an Admin</p>';
-  }
-  else if($object->isMod) {
-    echo '<p>' . $object->full_name .' is a Moderator</p>';
-  }
-  else if($object->isUser){
-    echo '<p>' . $object->full_name .' is a User</p>';
-  }
-  else {
-    echo '<p>' . $object->full_name .' is unidentifiable </p>';
-  }
-
-}
-
-// Using this to echo a perticular object's value from the array
-//  readableDate is actully a function in the User class that behaves like a
-//  property, this means more complex manipulations can be done
-echo 'Date of creation for Person1 : ' . $arrayOfUsers['Person1']->readableDate;
 ?>
