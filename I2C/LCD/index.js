@@ -153,6 +153,8 @@ function writeSentance (data, line){
   var dt;
   var formatted;
 
+  sendInstruction(0x01);
+
   while(1) {
 
     dt = dateTime.create();
