@@ -1,0 +1,18 @@
+{
+  "name": "lcd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "forever": "^0.15.3",
+    "i2c": "^0.2.3",
+    "node-datetime": "^1.0.0",
+    "sleep": "^5.1.1"
+  }
+}
