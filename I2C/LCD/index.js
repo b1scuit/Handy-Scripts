@@ -249,7 +249,7 @@ function getCorpBal(){
 
   request(eveSite+'/corp/AccountBalance.xml.aspx?characterID=0000000&keyID=0000000&vCode=00000000000000000000000000000000000000000000000000', function(err, res, body) {
     var xmlDoc = libxmljs.parseXmlString(body, { noblanks: true });
-    var wallet = parseInt(xmlDoc.get('//row[@accountID="73931708"]/@balance').value());
+    var wallet = parseInt(xmlDoc.get('//row[@accountID="00000000000"]/@balance').value());
 
     // Clear the display
     sendInstruction(0x01);
