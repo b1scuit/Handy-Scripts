@@ -15,7 +15,13 @@
     "forever": "^0.15.3",
     "i2c": "^0.2.3",
     "is-root": "^1.0.0",
+    "js-yaml": "^3.8.3",
+    "libxmljs": "^0.18.4",
     "node-datetime": "^1.0.0",
-    "sleep": "^5.1.1"
+    "prettyjson": "^1.2.1",
+    "request": "^2.81.0",
+    "sleep": "^5.1.1",
+    "xml2js": "^0.4.17",
+    "xml2json": "^0.11.0"
   }
 }
