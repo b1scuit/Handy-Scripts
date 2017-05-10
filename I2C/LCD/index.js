@@ -61,12 +61,12 @@ gpio.write([0x01, 0x00], function(err){if(err != null) { console.log(err);} });
 main();
 
 function writeA(value){
-  gpio.write([0x12, value], function(err){ return true; });
+  gpio.write([0x13, value], function(err){ return true; });
   return true;
 }
 
 function writeB(value){
-  gpio.write([0x13, value], function(err){ return true; });
+  gpio.write([0x12, value], function(err){ return true; });
   return true;
 }
 
@@ -75,7 +75,7 @@ function sendInstruction(data){
     writeA(data);
   }
   sleep.usleep(1);
-  writeB(0x02);
+  writeB(0x40);
   sleep.usleep(1);
   writeB(0x00);
 
@@ -85,7 +85,7 @@ function sendInstruction(data){
 function writeCharacter(data){
   writeA(data);
 
-  writeB(0x03);
+  writeB(0xc0);
   sleep.usleep(1);
   writeB(0x00);
 
