@@ -16,11 +16,9 @@ int main(){
   FRAM_lib fram;
   LIS3DH_lib acc;
 
-	//----- OPEN THE I2C BUS -----
 	char *filename = (char*)"/dev/i2c-7";
 
-	if ((file_i2c = open(filename, O_RDWR)) < 0)
-	{
+	if ((file_i2c = open(filename, O_RDWR)) < 0) {
 		printf("Failed to open the i2c bus");
 		return 0;
 	}
