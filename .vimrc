@@ -26,13 +26,31 @@ set ignorecase
 set smartcase
 set splitright
 set splitbelow
+set wildmode=longest:full,list
+set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*vim/backups*
+set wildignore+=*sass-cache*
+set wildignore+=*DS_Store*
+set wildignore+=vendor/rails/**
+set wildignore+=vendor/cache/**
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
+set nocompatible
+
+:if has('gui_running')
+    set transparency=10
+:endif
 
 inoremap jj <Esc>
-inoremap <Esc> <Nop>
 nnoremap <leader>v :vsplit<cr>
 nnoremap <leader>s :split<cr>
 nnoremap <leader>p :setf php<cr>
 map <leader>t :FZF<cr>
+map <leader>f :Files<cr>
+map <leader>g :GFiles?<cr>
 nnoremap ; :
 
 
