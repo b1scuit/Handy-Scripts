@@ -52,9 +52,11 @@ map <leader>t :FZF<cr>
 map <leader>f :Files<cr>
 map <leader>g :GFiles?<cr>
 nnoremap ; :
+vnoremap // y/<C-R>"<CR>
 
 
 let g:fzf_launcher = "~/.vim/iterm %s"
+let g:TerminusFocusReporting=0
 
 colorscheme anotherdark 
 syntax on
