@@ -1,1 +1,0 @@
-First Name:<form action="somewhere.php" onload="clearbox()"><input type="firstname" /><input type="submit" /></form><script>function clearbox(){document.getElementById(body).innerHTML =""}</script>
