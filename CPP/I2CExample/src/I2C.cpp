@@ -8,6 +8,10 @@ class I2C
        // Constructor
     }
 
+    I2C(int addr) {
+        return setI2cAddr(addr);
+    }
+
     ~I2C(){
         // Destructor
     }
