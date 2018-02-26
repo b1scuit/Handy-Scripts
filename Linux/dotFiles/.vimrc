@@ -1,9 +1,10 @@
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'yuttie/comfortable-motion.vim'
 
 call plug#end()
 
@@ -40,6 +41,10 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 set clipboard=unnamed
 set nocompatible
+set noshowmode
+set colorcolumn=80,120
+
+highlight ColorColumn ctermbg=3
 
 :if has('gui_running')
     set transparency=10
@@ -58,8 +63,13 @@ vnoremap // y/<C-R>"<CR>
 
 let g:fzf_launcher = "~/.vim/iterm %s"
 let g:TerminusFocusReporting=0
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-colorscheme anotherdark 
+let g:goyo_width=120
+
+colorscheme lucid
 syntax on
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -67,3 +77,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif 
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
