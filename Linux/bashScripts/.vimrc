@@ -1,11 +1,10 @@
 call plug#begin('~/.vim/plugged')
+Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'yuttie/comfortable-motion.vim'
-Plug 'rizzatti/dash.vim'
+Plug 'bling/vim-airline'
 
 call plug#end()
 
@@ -43,20 +42,6 @@ set wildignore+=*.png,*.jpg,*.gif
 set clipboard=unnamed
 set nocompatible
 set noshowmode
-set colorcolumn=80,120
-
-function! s:Stoker(params)
-    execute "!ssh -F /users/peterholt/Documents/d3r/vagrant-ssh default " + $params
-endfunction
-
-
-command Gitgui execute "!git gui"
-command Vagrant execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; /bin/bash; exit"'
-command ClearCache execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; php ./vendor/d3r/core/tools/clear_cache.php local; exit"'
-command Dbupdate execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; php ./vendor/d3r/core/tools/update_db.php local; exit"'
-command -nargs=1 Stoker call s:Stoker(<f-args>)
-
-highlight ColorColumn ctermbg=3
 
 :if has('gui_running')
     set transparency=10
@@ -66,25 +51,15 @@ inoremap jj <Esc>
 nnoremap <leader>v :vsplit<cr>
 nnoremap <leader>s :split<cr>
 nnoremap <leader>p :setf php<cr>
-nnoremap <leader>G :!git add %
 map <leader>t :FZF<cr>
 map <leader>f :Files<cr>
+map <leader>g :GFiles?<cr>
 nnoremap ; :
 vnoremap // y/<C-R>"<CR>
-noremap <leader>pd :call PhpDoc()<CR>
 
-nnoremap <leader>k :res +10<cr>
-nnoremap <leader>j :res -10<cr>
-nnoremap <leader>l :vertical resize +5<cr>
-nnoremap <leader>h :vertical resize -5<cr>
 
 let g:fzf_launcher = "~/.vim/iterm %s"
 let g:TerminusFocusReporting=0
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:goyo_width=120
 
 colorscheme lucid
 syntax on
@@ -94,7 +69,3 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif 
-
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
