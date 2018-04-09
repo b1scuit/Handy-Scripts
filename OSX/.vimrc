@@ -45,8 +45,9 @@ set nocompatible
 set noshowmode
 set colorcolumn=80,120
 
-function! s:Stoker(params)
-    execute "!ssh -F /users/peterholt/Documents/d3r/vagrant-ssh default " + $params
+function! Stoker(...)
+    echom a:1
+    execute '!ssh -F /users/peterholt/Documents/d3r/vagrant-ssh default -t "echo ' + $params + '"'
 endfunction
 
 
@@ -54,7 +55,7 @@ command Gitgui execute "!git gui"
 command Vagrant execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; /bin/bash; exit"'
 command ClearCache execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; php ./vendor/d3r/core/tools/clear_cache.php local; exit"'
 command Dbupdate execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; php ./vendor/d3r/core/tools/update_db.php local; exit"'
-command -nargs=1 Stoker call s:Stoker(<f-args>)
+command Stoker call Stoker()
 
 highlight ColorColumn ctermbg=3
 
@@ -79,6 +80,7 @@ nnoremap <leader>l :vertical resize +5<cr>
 nnoremap <leader>h :vertical resize -5<cr>
 
 let g:fzf_launcher = "~/.vim/iterm %s"
+let $PS1="[VIM]"
 let g:TerminusFocusReporting=0
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
