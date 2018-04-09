@@ -1,18 +1,21 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif 
+
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'yuttie/comfortable-motion.vim'
-Plug 'rizzatti/dash.vim'
 
 call plug#end()
 
 set noswapfile
 set backspace=indent,eol,start
 set buftype: " "
-set guifont=Menlo\ Regular:h10
+set guifont=Hack\ Regular:h8
 set number
 set wrap!
 set tabstop =4
@@ -45,17 +48,19 @@ set nocompatible
 set noshowmode
 set colorcolumn=80,120
 
-function! Stoker(...)
-    echom a:1
-    execute '!ssh -F /users/peterholt/Documents/d3r/vagrant-ssh default -t "echo ' + $params + '"'
-endfunction
-
-
 command Gitgui execute "!git gui"
-command Vagrant execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; /bin/bash; exit"'
-command ClearCache execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; php ./vendor/d3r/core/tools/clear_cache.php local; exit"'
-command Dbupdate execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; php ./vendor/d3r/core/tools/update_db.php local; exit"'
-command Stoker call Stoker()
+
+if has("mac") || has("macunix")
+    function! Stoker(...)
+        echom a:1
+        execute '!ssh -F /users/peterholt/Documents/d3r/vagrant-ssh default -t "echo ' + $params + '"'
+    endfunction
+
+    command Vagrant execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; /bin/bash; exit"'
+    command ClearCache execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; php ./vendor/d3r/core/tools/clear_cache.php local; exit"'
+    command Dbupdate execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; php ./vendor/d3r/core/tools/update_db.php local; exit"'
+    command Stoker call Stoker()
+endif 
 
 highlight ColorColumn ctermbg=3
 
@@ -72,7 +77,6 @@ map <leader>t :FZF<cr>
 map <leader>f :Files<cr>
 nnoremap ; :
 vnoremap // y/<C-R>"<CR>
-noremap <leader>pd :call PhpDoc()<CR>
 
 nnoremap <leader>k :res +10<cr>
 nnoremap <leader>j :res -10<cr>
@@ -80,22 +84,17 @@ nnoremap <leader>l :vertical resize +5<cr>
 nnoremap <leader>h :vertical resize -5<cr>
 
 let g:fzf_launcher = "~/.vim/iterm %s"
-let $PS1="[VIM]"
 let g:TerminusFocusReporting=0
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:goyo_width=120
+try
+    colorscheme lucid
+catch
+endtry
 
-colorscheme lucid
 syntax on
-
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif 
 
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
