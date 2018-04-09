@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'yuttie/comfortable-motion.vim'
 
 call plug#end()
@@ -91,6 +92,7 @@ set statusline+=%*
 
 try
     colorscheme lucid
+    let g:airline_theme='minimalist'
 catch
 endtry
 
