@@ -7,15 +7,24 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+" FZF Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+" Airline status bar
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Vim theme
+Plug 'dikiaap/minimalist'
+" Better scrolling
 Plug 'yuttie/comfortable-motion.vim'
+" Better syntax hilighting
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
 " #################### VIM settings ############################################
+
+inoremap jj <Esc>
+nnoremap ; :
 
 set noswapfile
 set backspace=indent,eol,start
@@ -40,19 +49,14 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-inoremap jj <Esc>
-nnoremap ; :
-
 " #################### Extra commands ##########################################
 
 nnoremap <leader>v :vsplit<cr>
 nnoremap <leader>s :split<cr>
-nnoremap <leader>p :setf php<cr>
 nnoremap <leader>G :!git add %
 vnoremap // y/<C-R>"<CR>
 
 command Gitgui execute "!git gui"
-
 
 " #################### Basic Code editor settings ##############################
 
@@ -66,14 +70,15 @@ set expandtab
 set shiftwidth=4
 set smarttab
 
+nnoremap <leader>p :setf php<cr>
+
 " #################### Theme settings ##########################################
 
 set guifont=Hack\ Regular:h8
 set colorcolumn=80,120
 
 try
-    colorscheme lucid
-    let g:airline_theme='minimalist'
+    colorscheme minimalist
 catch
 endtry
 
@@ -101,9 +106,15 @@ set omnifunc=syntaxcomplete#Complete
 
 let g:TerminusFocusReporting=0
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+try
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+
+    let g:airline_theme='minimalist'
+
+catch
+endtry
 
 " #################### Resize tab keyboard shortcuts ###########################
 
