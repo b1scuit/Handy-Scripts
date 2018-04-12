@@ -53,17 +53,6 @@ vnoremap // y/<C-R>"<CR>
 
 command Gitgui execute "!git gui"
 
-if has("mac") || has("macunix")
-    function! Stoker(...)
-        echom a:1
-        execute '!ssh -F /users/peterholt/Documents/d3r/vagrant-ssh default -t "echo ' + $params + '"'
-    endfunction
-
-    command Vagrant execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; /bin/bash; exit"'
-    command ClearCache execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; php ./vendor/d3r/core/tools/clear_cache.php local; exit"'
-    command Dbupdate execute '!ssh -F /Users/peterholt/Documents/d3r/vagrant-ssh default -t "cd ' . getcwd() '; php ./vendor/d3r/core/tools/update_db.php local; exit"'
-    command Stoker call Stoker()
-endif
 
 " #################### Basic Code editor settings ##############################
 
@@ -130,3 +119,9 @@ let g:fzf_launcher = "~/.vim/iterm %s"
 map <leader>t :FZF<cr>
 map <leader>f :Files<cr>
 
+" #################### Importing extra files ###################################
+
+try
+    source $HOME/.vimrcExtra
+catch
+endtry
