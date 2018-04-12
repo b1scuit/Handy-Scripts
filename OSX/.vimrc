@@ -73,7 +73,6 @@ set smarttab
 " Automatically apply PHP highlighting to HTML files (inline PHP)
 autocmd BufNewFile,BufRead *.html set syntax=php
 
-
 " #################### Theme settings ##########################################
 
 set guifont=Hack\ Regular:h8
