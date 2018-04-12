@@ -70,7 +70,9 @@ set expandtab
 set shiftwidth=4
 set smarttab
 
-nnoremap <leader>p :setf php<cr>
+" Automatically apply PHP highlighting to HTML files (inline PHP)
+autocmd BufNewFile,BufRead *.html set syntax=php
+
 
 " #################### Theme settings ##########################################
 
