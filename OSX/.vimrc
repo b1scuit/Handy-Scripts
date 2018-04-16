@@ -19,6 +19,8 @@ Plug 'yuttie/comfortable-motion.vim'
 " Better syntax hilighting
 Plug 'sheerun/vim-polyglot'
 
+Plug 'tpope/vim-fugitive'
+
 if has("mac") || has("macunix")
     Plug 'rizzatti/dash.vim'
 endif
