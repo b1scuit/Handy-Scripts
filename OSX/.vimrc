@@ -19,6 +19,10 @@ Plug 'yuttie/comfortable-motion.vim'
 " Better syntax hilighting
 Plug 'sheerun/vim-polyglot'
 
+if has("mac") || has("macunix")
+    Plug 'rizzatti/dash.vim'
+endif
+
 call plug#end()
 
 " #################### VIM settings ############################################
@@ -54,7 +58,6 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 nnoremap <leader>v :vsplit<cr>
 nnoremap <leader>s :split<cr>
 nnoremap <leader>G :!git add %
-vnoremap // y/<C-R>"<CR>
 
 try
     command Gitgui execute "!git gui"
