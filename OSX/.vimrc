@@ -56,7 +56,10 @@ nnoremap <leader>s :split<cr>
 nnoremap <leader>G :!git add %
 vnoremap // y/<C-R>"<CR>
 
-command Gitgui execute "!git gui"
+try
+    command Gitgui execute "!git gui"
+catch
+endtry 
 
 " #################### Basic Code editor settings ##############################
 
@@ -72,6 +75,7 @@ set smarttab
 
 " Automatically apply PHP highlighting to HTML files (inline PHP)
 autocmd BufNewFile,BufRead *.html set syntax=php
+autocmd BufEnter * :syntax sync fromstart
 
 " #################### Theme settings ##########################################
 
