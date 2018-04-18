@@ -18,7 +18,7 @@ Plug 'dikiaap/minimalist'
 Plug 'yuttie/comfortable-motion.vim'
 " Better syntax hilighting
 Plug 'sheerun/vim-polyglot'
-
+" Better intergration with GIT
 Plug 'tpope/vim-fugitive'
 
 if has("mac") || has("macunix")
@@ -51,8 +51,8 @@ set noshowmode
 
 filetype plugin on
 
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_SI = "\<Esc>]50;CursorShape=0\x7"
+let &t_SR = "\<Esc>]50;CursorShape=0\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " #################### Extra commands ##########################################
@@ -61,10 +61,7 @@ nnoremap <leader>v :vsplit<cr>
 nnoremap <leader>s :split<cr>
 nnoremap <leader>G :!git add %
 
-try
-    command Gitgui execute "!git gui"
-catch
-endtry 
+command Gitgui execute "!git gui"
 
 " #################### Basic Code editor settings ##############################
 
@@ -91,10 +88,6 @@ try
     colorscheme minimalist
 catch
 endtry
-
-:if has('gui_running')
-    set transparency=10
-:endif
 
 " #################### Wild Menu ###############################################
 
@@ -126,19 +119,9 @@ try
 catch
 endtry
 
-" #################### Resize tab keyboard shortcuts ###########################
-
-nnoremap <leader>k :res +10<cr>
-nnoremap <leader>j :res -10<cr>
-nnoremap <leader>l :vertical resize +5<cr>
-nnoremap <leader>h :vertical resize -5<cr>
-
 " #################### FZF Settings ############################################
 
 let g:fzf_launcher = "~/.vim/iterm %s"
-
-map <leader>t :FZF<cr>
-map <leader>f :Files<cr>
 
 " #################### Importing extra files ###################################
 
