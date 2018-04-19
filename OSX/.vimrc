@@ -46,7 +46,6 @@ set smartcase
 set splitright
 set splitbelow
 set clipboard=unnamed
-set nocompatible
 set noshowmode
 
 filetype plugin on
