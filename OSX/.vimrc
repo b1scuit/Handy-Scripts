@@ -34,9 +34,8 @@ nnoremap ; :
 
 set noswapfile
 set backspace=indent,eol,start
-set buftype: " "
 set number
-set wrap!
+set nowrap
 set mouse =a
 set hlsearch
 set showmatch
@@ -45,7 +44,7 @@ set ignorecase
 set smartcase
 set splitright
 set splitbelow
-set clipboard=unnamed
+set clipboard^=unnamed
 set noshowmode
 
 let &t_SI = "\<Esc>]50;CursorShape=0\x7"
@@ -73,7 +72,7 @@ augroup CodeSyntax
 
     autocmd!
     autocmd BufNewFile,BufRead *.html set syntax=php
-    autocmd BufEnter * :syntax sync fromstart
+    autocmd BufEnter * syntax sync fromstart
 
 augroup END
 
