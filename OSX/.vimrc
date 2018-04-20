@@ -48,8 +48,6 @@ set splitbelow
 set clipboard=unnamed
 set noshowmode
 
-filetype plugin on
-
 let &t_SI = "\<Esc>]50;CursorShape=0\x7"
 let &t_SR = "\<Esc>]50;CursorShape=0\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
@@ -64,24 +62,32 @@ command Gitgui execute "!git gui"
 
 " #################### Basic Code editor settings ##############################
 
-syntax on
-
-highlight ColorColumn ctermbg=3
-
-set tabstop =4
-set softtabstop=0
-set expandtab
+set tabstop =8
+set softtabstop=4
 set shiftwidth=4
 set smarttab
+set expandtab
 
 " Automatically apply PHP highlighting to HTML files (inline PHP)
-autocmd BufNewFile,BufRead *.html set syntax=php
-autocmd BufEnter * :syntax sync fromstart
+augroup Syntax
+
+    autocmd!
+    autocmd BufNewFile,BufRead *.html set syntax=php
+    autocmd BufEnter * :syntax sync fromstart
+
+augroup END
 
 " #################### Theme settings ##########################################
 
 set guifont=Hack\ Regular:h8
 set colorcolumn=80,120
+
+augroup Colours
+
+    autocmd!
+    autocmd ColorScheme *  highlight ColorColumn ctermbg=3
+
+augroup END
 
 try
     colorscheme minimalist
