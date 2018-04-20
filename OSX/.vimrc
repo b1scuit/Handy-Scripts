@@ -7,6 +7,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+" Better intergration with GIT
+Plug 'tpope/vim-fugitive'
 " FZF Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -18,8 +20,6 @@ Plug 'dikiaap/minimalist'
 Plug 'yuttie/comfortable-motion.vim'
 " Better syntax hilighting
 Plug 'sheerun/vim-polyglot'
-" Better intergration with GIT
-Plug 'tpope/vim-fugitive'
 
 if has("mac") || has("macunix")
     Plug 'rizzatti/dash.vim'
@@ -69,7 +69,7 @@ set smarttab
 set expandtab
 
 " Automatically apply PHP highlighting to HTML files (inline PHP)
-augroup Syntax
+augroup CodeSyntax
 
     autocmd!
     autocmd BufNewFile,BufRead *.html set syntax=php
@@ -85,7 +85,7 @@ set colorcolumn=80,120
 augroup Colours
 
     autocmd!
-    autocmd ColorScheme *  highlight ColorColumn ctermbg=3
+    autocmd ColorScheme *  highlight ColorColumn ctermbg=DarkGrey
 
 augroup END
 
