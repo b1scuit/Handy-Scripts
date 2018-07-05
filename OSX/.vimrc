@@ -128,6 +128,12 @@ endtry
 
 let g:fzf_launcher = "~/.vim/iterm %s"
 
+" #################### Netrw Settings ##########################################
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 4
+let g:netrw_winsize = 20
+
 " #################### Importing extra files ###################################
 
 try
