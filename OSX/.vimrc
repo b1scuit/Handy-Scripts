@@ -46,6 +46,7 @@ set splitright
 set splitbelow
 set clipboard^=unnamed
 set noshowmode
+set mouse=n
 
 let &t_SI = "\<Esc>]50;CursorShape=0\x7"
 let &t_SR = "\<Esc>]50;CursorShape=0\x7"
