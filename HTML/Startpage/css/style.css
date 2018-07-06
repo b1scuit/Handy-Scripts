@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: Hack, monospace;
+    background-color: #000000;
+}
+h3 {
+    color: #BBBB06;
+}
+.col-md-3 {
+    background-color: #151515;
+    font-family: 'Inconsolata', monospace;
+    font-size: 16px;
+    color: #F4493D;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.col-12 {
+    padding: 0px;
+}
+.list-group-item {
+    background-color: inherit;
+    text-decoration: none;
+    color: #50EAE6;
+    padding: 2px;
+    border: 0px;
+}
+.list-group-item a:link {
+    text-decoration: none;
+    color: #50EAE6;
+}
+.list-group-item a:hover {
+    text-decoration: none;
+    color: #4B4EF9;
+}
+.list-group-item a:visited{
+    text-decoration: none;
+    color: #50EAE6;
+}
+.list-group-item a:visited:hover{
+    text-decoration: none;
+    color: #4B4EF9;
+}
+
+li:before {
+  content: "> ";
+}
+
+.terminal-text {
+    outline: none;
+   border: none;
+   background-color: #000000;
+}
+.terminal-text:focus {
+    outline: none;
+    border: none;
+    background-color: #000000;
+    box-shadow: none;
+}
+
+.ui-autocomplete {
+    z-index: 999999;
+    background-color: #4F4F4F;
+    width: 1rem;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.ui-helper-hidden-accessible {
+    display: none;
+}
