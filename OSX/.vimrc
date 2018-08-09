@@ -20,6 +20,8 @@ Plug 'dikiaap/minimalist'
 Plug 'yuttie/comfortable-motion.vim'
 " Better syntax hilighting
 Plug 'sheerun/vim-polyglot'
+" Tab / spaces visual
+Plug 'Yggdroot/indentLine'
 
 if has("mac") || has("macunix")
     Plug 'rizzatti/dash.vim'
