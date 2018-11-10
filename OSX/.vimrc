@@ -23,9 +23,9 @@ Plug 'sheerun/vim-polyglot'
 " Tab / spaces visual
 Plug 'Yggdroot/indentLine'
 
-if has("mac") || has("macunix")
-    Plug 'rizzatti/dash.vim'
-endif
+Plug 'gabrielelana/vim-markdown'
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
@@ -69,6 +69,7 @@ set softtabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
+set ts=4
 
 " Automatically apply PHP highlighting to HTML files (inline PHP)
 augroup CodeSyntax
@@ -76,6 +77,10 @@ augroup CodeSyntax
     autocmd!
     autocmd BufNewFile,BufRead *.html set syntax=php
     autocmd BufEnter * syntax sync fromstart
+    
+    autocmd Filetype typescript set softtabstop=2
+    autocmd Filetype typescript set shiftwidth=2
+    autocmd Filetype typescript set tabstop=2
 
 augroup END
 
