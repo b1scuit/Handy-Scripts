@@ -15,7 +15,7 @@ Plug 'junegunn/fzf.vim'
 " Airline status bar
 Plug 'vim-airline/vim-airline'
 " Vim theme
-Plug 'dikiaap/minimalist'
+Plug 'dracula/vim', { 'as': 'dracula' }
 " Better scrolling
 Plug 'yuttie/comfortable-motion.vim'
 " Better syntax hilighting
@@ -26,6 +26,10 @@ Plug 'Yggdroot/indentLine'
 Plug 'gabrielelana/vim-markdown'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+Plug 'sebdah/vim-delve'
+
+Plug 'SirVer/ultisnips'
 
 call plug#end()
 
@@ -49,6 +53,8 @@ set splitbelow
 set clipboard^=unnamed
 set noshowmode
 set mouse=n
+set foldmethod=indent
+set foldlevelstart=99
 
 let &t_SI = "\<Esc>]50;CursorShape=0\x7"
 let &t_SR = "\<Esc>]50;CursorShape=0\x7"
@@ -97,7 +103,7 @@ augroup Colours
 augroup END
 
 try
-    colorscheme minimalist
+    colorscheme dracula
 catch
 endtry
 
@@ -126,7 +132,7 @@ try
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
 
-    let g:airline_theme='minimalist'
+    let g:airline_theme='dracula'
 
 catch
 endtry
@@ -141,6 +147,12 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 4
 let g:netrw_winsize = 20
 
+" #################### VIM-GOSettings ##########################################
+augroup vimGo
+
+ autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+
+augroup END
 " #################### Importing extra files ###################################
 
 try
