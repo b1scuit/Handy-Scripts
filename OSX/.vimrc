@@ -31,6 +31,10 @@ Plug 'sebdah/vim-delve'
 
 Plug 'SirVer/ultisnips'
 
+Plug 'scrooloose/nerdtree'
+
+Plug 'ycm-core/YouCompleteMe'
+
 call plug#end()
 
 " #################### VIM settings ############################################
