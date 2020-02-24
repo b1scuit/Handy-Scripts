@@ -151,6 +151,11 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 4
 let g:netrw_winsize = 20
 
+" #################### NERDTree Settings #######################################
+
+map <C-n> :NERDTreeToggle<CR>
+let g:indentLine_setColors = 0
+
 " #################### VIM-GOSettings ##########################################
 augroup vimGo
 
@@ -158,6 +163,11 @@ augroup vimGo
 
 augroup END
 " #################### Importing extra files ###################################
+
+
+
+
+
 
 try
     source $HOME/.vimrcExtra
