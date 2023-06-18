@@ -1,0 +1,53 @@
+# file opened: ./test/text.asm
+ 1    0000                  device	zxspectrum48
+ 2    0000
+ 3    0000                  org $8000
+ 4    8000 18 05            jr start
+ 5    8002
+ 6    8002              string:
+ 7    8002 68 65 6C 6C      db "hello"
+ 7    8006 6F
+ 8    8007
+ 9    8007              STRING_LEN = 5
+10    8007              ROM_CLS = $0DAF
+11    8007              COLOUR_ATTR = $5800
+12    8007              ENTER = $0D
+13    8007              BLACK_WHITE = $47
+14    8007
+15    8007              start:
+16    8007 ED 56            im 1
+17    8009 CD AF 0D         call ROM_CLS
+18    800C 21 02 80         ld  hl,string
+19    800F 06 05            ld  b,STRING_LEN
+20    8011              loop:
+21    8011 7E               ld a,(hl)
+22    8012 D7               rst $10
+23    8013 23               inc hl
+24    8014 05               dec b
+25    8015 20 FA            jr nz,loop
+26    8017 3E 0D            ld a,ENTER
+27    8019 D7               rst $10
+28    801A
+29    801A 3E 47            ld a,BLACK_WHITE
+30    801C 32 00 58         ld (COLOUR_ATTR), a
+31    801F
+32    801F DD 21 02 80      ld ix,string
+33    8023 DD CB 00 AE      res 5,(ix)
+34    8027 DD 7E 00         ld a,(ix)
+35    802A D7               rst $10
+36    802B DD 7E 01         ld a,(ix+1)
+37    802E D7               rst $10
+38    802F DD 7E 02         ld a,(ix+2)
+39    8032 D7               rst $10
+40    8033 DD 7E 03         ld a,(ix+3)
+41    8036 D7               rst $10
+42    8037 DD 7E 04         ld a,(ix+4)
+43    803A D7               rst $10
+44    803B 3E 0D            ld a,ENTER
+45    803D D7               rst $10
+46    803E
+47    803E C9               ret
+48    803F
+49    803F
+50    803F                  savesna "lines.sna",start
+# file closed: ./test/text.asm

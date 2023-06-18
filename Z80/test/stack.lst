@@ -1,0 +1,44 @@
+# file opened: ./test/stack.asm
+ 1    0000                  device	zxspectrum48
+ 2    0000                  org $8000
+ 3    8000
+ 4    8000 C3 05 80         jp start
+ 5    8003
+ 6    8003              SCREEN_BITMAP = $4000
+ 7    8003              BITMAP_SIZE = $1800
+ 8    8003              SCREEN_COLOUR = $5800
+ 9    8003              COLOUR_SIZE = $0300
+10    8003
+11    8003              sp_backup:
+12    8003 00 00            dw 0
+13    8005
+14    8005              start:
+15    8005 D9               exx
+16    8006 E5               push hl
+17    8007
+18    8007                  ; make sopme stripes
+19    8007 21 00 40         ld hl, SCREEN_BITMAP
+20    800A 11 00 FF         ld de,$FF00
+21    800D 01 00 0C         ld bc,BITMAP_SIZE/2
+22    8010 CD 16 80         call fill_ram
+23    8013
+24    8013 E1               pop hl
+25    8014 D9               exx ; restire hl' to return to basic
+26    8015 C9               ret
+27    8016
+28    8016              fill_ram:
+29    8016 ED 73 03 80      ld (sp_backup),sp
+30    801A 09               add hl, bc
+31    801B 09               add hl, bc
+32    801C F9               ld sp,hl
+33    801D 3E FF            ld a,$FF
+34    801F              .loop:
+35    801F D5               push de
+36    8020 0D               dec c
+37    8021 C2 1F 80         jp nz,.loop
+38    8024 ED 7B 03 80      ld sp,(sp_backup) ; restore stack pointer
+39    8028 C9               ret
+40    8029
+41    8029                  savesna "stack.sna",start
+42    8029
+# file closed: ./test/stack.asm

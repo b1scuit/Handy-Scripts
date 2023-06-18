@@ -1,0 +1,70 @@
+# file opened: ./test/message.asm
+ 1    0000                  device	zxspectrum48
+ 2    0000
+ 3    0000                  org $8000
+ 4    8000 18 0D            jr start
+ 5    8002
+ 6    8002              ENTER= $0D
+ 7    8002              UPPER_A = $41
+ 8    8002              UPPER_Z = $5A
+ 9    8002              LOWER_A = $61
+10    8002              LOWER_Z = $7A
+11    8002
+12    8002              messsage:
+13    8002 48 65 6C 6C      db "Hello world!",ENTER
+13    8006 6F 20 77 6F
+13    800A 72 6C 64 21
+13    800E 0D
+14    800F
+15    800F              MSG_LEN = $ - messsage
+16    800F
+17    800F              start:
+18    800F 21 02 80         ld hl,messsage
+19    8012 06 0D            ld b,MSG_LEN
+20    8014              orig_loop:
+21    8014 7E               ld a,(hl)
+22    8015 D7               rst $10
+23    8016 23               inc hl
+message.asm(24): error: Unrecognized instruction: djnx orig_loop
+24    8017                  djnx orig_loop
+25    8017
+26    8017 21 02 80         ld hl,messsage
+27    801A 7E               ld a,(hl)
+28    801B              lower_loop:
+29    801B FE 41            cp UPPER_A
+30    801D 38 05            jr c,print_lower_char
+31    801F FE 5B            cp UPPER_Z+1
+32    8021 DC 3A 80         call c,tolower
+33    8024              print_lower_char:
+34    8024 D7               rst $10
+35    8025 23               inc hl
+36    8026 7E               ld a,(hl)
+message.asm(37): error: Label not found: EMNTER
+37    8027 FE 00            cp EMNTER
+38    8029 20 F0            jr nz, lower_loop
+39    802B D7               rst $10
+40    802C
+41    802C 21 02 80         ld hl, messsage
+42    802F 06 0D            ld b,MSG_LEN
+43    8031              upper_loop:
+44    8031 7E               ld a,(hl)
+45    8032 CD 3D 80         call toupper
+46    8035 D7               rst $10
+47    8036 23               inc hl
+48    8037 10 F8            djnz upper_loop
+49    8039
+50    8039 C9               ret
+51    803A              tolower:
+52    803A C6 20            add $20
+53    803C C9               ret
+54    803D
+55    803D              toupper:
+56    803D FE 61            cp LOWER_A
+57    803F D8               ret c
+58    8040 FE 7B            cp LOWER_Z+1
+59    8042 D0               ret nc
+60    8043 D6 20            sub $20
+61    8045 C9               ret
+62    8046
+63    8046                  savesna "message.sna",start
+# file closed: ./test/message.asm

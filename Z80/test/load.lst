@@ -1,0 +1,11 @@
+# file opened: ./test/load.asm
+1     0000                  device	zxspectrum48
+2     0000
+3     0000                  org $8000
+4     8000              start:
+5     8000 3E D6            ld a,$d6
+6     8002 32 00 58         ld ($5800),a
+7     8005 C9               ret
+8     8006
+9     8006                  savesna "load.sna",start
+# file closed: ./test/load.asm
