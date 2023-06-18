@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PIC16F18877-I_P")(type "Legacy")(uri "${KIPRJMOD}/PIC16F18877-I_P/PIC16F18877-I_P.lib")(options "")(descr ""))
+  (lib (name "AT28C256")(type "Legacy")(uri "${KIPRJMOD}/AT28C256/AT28C256.lib")(options "")(descr ""))
+  (lib (name "EEPROM Programmer-rescue")(type "KiCad")(uri "${KIPRJMOD}/EEPROM Programmer-rescue.kicad_sym")(options "")(descr ""))
+)

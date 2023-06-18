@@ -1,0 +1,31 @@
+"Source:","C:\Users\dysvi\Documents\Bread Board Z80 Project\Bread Board Z80 Project\EEPROM Programmer\EEPROM Programmer\EEPROM Programmer.sch"
+"Date:","22/07/2020 11:24:04"
+"Tool:","Eeschema (5.1.6)-1"
+"Generator:","C:\Program Files\KiCad\bin\scripting\plugins/bom_csv_grouped_by_value.py"
+"Component Count:","8"
+
+"Individual Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","Field4","Field5","Field6","Field7","Field8"
+"","","C2","100nF","Device:C","","~","","","","",""
+"","","C3","4.7uF","Device:CP","","~","","","","",""
+"","","J1","ICSP","Connector_Generic:Conn_01x06","","~","","","","",""
+"","","J2","UART","Connector_Generic:Conn_01x06","","~","","","","",""
+"","","R1","10K","Device:R","","~","","","","",""
+"","","SW1","RESET","Switch:SW_Push","","~","","","","",""
+"","","U1","PIC16F18877-I_P","PIC16F18877-I_P:PIC16F18877-I_P","DIP1540W47P254L5320H635Q40B","IPC-7351B","MICROCHIP","C","","",""
+"","","U2","AT28C256","AT28C256:AT28C256","","AT28C256","Microchip","PDIP-28 Microchip","None","Unavailable","EEPROM Memory IC 256Kb (32K x 8) Parallel 150ns 32-PLCC (11.43x13.97)"
+
+
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","Field4","Field5","Field6","Field7","Field8"
+"1","1","C2","100nF","Device:C","","~","","","","",""
+"2","1","C3","4.7uF","Device:CP","","~","","","","",""
+"3","1","J1","ICSP","Connector_Generic:Conn_01x06","","~","","","","",""
+"4","1","J2","UART","Connector_Generic:Conn_01x06","","~","","","","",""
+"5","1","R1","10K","Device:R","","~","","","","",""
+"6","1","SW1","RESET","Switch:SW_Push","","~","","","","",""
+"7","1","U1","PIC16F18877-I_P","PIC16F18877-I_P:PIC16F18877-I_P","DIP1540W47P254L5320H635Q40B","IPC-7351B","MICROCHIP","C","","",""
+"8","1","U2","AT28C256","AT28C256:AT28C256","","AT28C256","Microchip","PDIP-28 Microchip","None","Unavailable","EEPROM Memory IC 256Kb (32K x 8) Parallel 150ns 32-PLCC (11.43x13.97)"

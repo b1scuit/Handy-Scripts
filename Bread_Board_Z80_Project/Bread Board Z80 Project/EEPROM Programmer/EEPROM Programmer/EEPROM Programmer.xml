@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.kicad_sch</source>
+    <date>2023 June 15, Thursday 00:42:49</date>
+    <tool>Eeschema 7.0.5-0</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>EEPROM Programmer.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C2">
+      <value>100nF</value>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f1da220</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>4.7uF</value>
+      <libsource lib="EEPROM Programmer-rescue" part="CP-Device" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f1dacd6</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f284307</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f28ad61</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>ICSP</value>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f1edab7</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>USB_B_Micro</value>
+      <libsource lib="EEPROM Programmer-rescue" part="USB_B_Micro-Connector" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f224214</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f277d85</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>330</value>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f28b8c8</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>330</value>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f28c6bd</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>RESET</value>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f25017a</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>PIC16F18877-I_P</value>
+      <footprint>DIP1540W47P254L5320H635Q40B</footprint>
+      <datasheet>IPC-7351B</datasheet>
+      <fields>
+        <field name="Field4">MICROCHIP</field>
+        <field name="Field5">C</field>
+      </fields>
+      <libsource lib="EEPROM Programmer-rescue" part="PIC16F18877-I_P-PIC16F18877-I_P" description=""/>
+      <property name="Field4" value="MICROCHIP"/>
+      <property name="Field5" value="C"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f181497</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>AT28C256</value>
+      <datasheet>AT28C256</datasheet>
+      <fields>
+        <field name="Field4">Microchip</field>
+        <field name="Field5">PDIP-28 Microchip</field>
+        <field name="Field6">None</field>
+        <field name="Field7">Unavailable</field>
+        <field name="Field8">EEPROM Memory IC 256Kb (32K x 8) Parallel 150ns 32-PLCC (11.43x13.97)</field>
+      </fields>
+      <libsource lib="" part="AT28C256_2" description=""/>
+      <property name="Field4" value="Microchip"/>
+      <property name="Field5" value="PDIP-28 Microchip"/>
+      <property name="Field6" value="None"/>
+      <property name="Field7" value="Unavailable"/>
+      <property name="Field8" value="EEPROM Memory IC 256Kb (32K x 8) Parallel 150ns 32-PLCC (11.43x13.97)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f183d49</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>MCP2221AxP</value>
+      <footprint>Package_DIP:DIP-14_W7.62mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20005565B.pdf</datasheet>
+      <libsource lib="Interface_USB" part="MCP2221AxP" description="USB to I2C/UART Protocol Converter with GPIO, DIP-14"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer.sch"/>
+      <property name="ki_description" value="USB to I2C/UART Protocol Converter with GPIO, DIP-14"/>
+      <property name="ki_keywords" value="USB I2C UART Converter Bridge"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f20914f</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="" part="AT28C256_2">
+      <docs>AT28C256</docs>
+      <footprints>
+        <fp>DIL28-6</fp>
+        <fp>DIL28-ZIF</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AT28C256</field>
+        <field name="Datasheet">AT28C256</field>
+        <field name="">Microchip</field>
+        <field name="">PDIP-28 Microchip</field>
+        <field name="">None</field>
+        <field name="">Unavailable</field>
+        <field name="">EEPROM Memory IC 256Kb (32K x 8) Parallel 150ns 32-PLCC (11.43x13.97)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A14" type="bidirectional"/>
+        <pin num="2" name="A12" type="bidirectional"/>
+        <pin num="3" name="A7" type="bidirectional"/>
+        <pin num="4" name="A6" type="bidirectional"/>
+        <pin num="5" name="A5" type="bidirectional"/>
+        <pin num="6" name="A4" type="bidirectional"/>
+        <pin num="7" name="A3" type="bidirectional"/>
+        <pin num="8" name="A2" type="bidirectional"/>
+        <pin num="9" name="A1" type="bidirectional"/>
+        <pin num="10" name="A0" type="bidirectional"/>
+        <pin num="11" name="IO0" type="bidirectional"/>
+        <pin num="12" name="IO1" type="bidirectional"/>
+        <pin num="13" name="IO2" type="bidirectional"/>
+        <pin num="14" name="GND" type="bidirectional"/>
+        <pin num="15" name="IO3" type="bidirectional"/>
+        <pin num="16" name="IO4" type="bidirectional"/>
+        <pin num="17" name="IO5" type="bidirectional"/>
+        <pin num="18" name="IO6" type="bidirectional"/>
+        <pin num="19" name="IO7" type="bidirectional"/>
+        <pin num="20" name="~{CE}" type="bidirectional"/>
+        <pin num="21" name="A10" type="bidirectional"/>
+        <pin num="22" name="~{OE}" type="bidirectional"/>
+        <pin num="23" name="A11" type="bidirectional"/>
+        <pin num="24" name="A9" type="bidirectional"/>
+        <pin num="25" name="A8" type="bidirectional"/>
+        <pin num="26" name="A13" type="bidirectional"/>
+        <pin num="27" name="~{WE}" type="bidirectional"/>
+        <pin num="28" name="VCC" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="EEPROM Programmer-rescue" part="CP-Device">
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">Device_CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="EEPROM Programmer-rescue" part="PIC16F18877-I_P-PIC16F18877-I_P">
+      <docs>IPC-7351B</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PIC16F18877-I_P_PIC16F18877-I_P</field>
+        <field name="Footprint">DIP1540W47P254L5320H635Q40B</field>
+        <field name="Datasheet">IPC-7351B</field>
+        <field name="Field4">MICROCHIP</field>
+        <field name="Field5">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RE3/IOCE3/!MCLR!/VPP" type="bidirectional"/>
+        <pin num="2" name="RA0/ANA0/C1IN0-/C2IN0-/CLCIN0/IOCA0" type="bidirectional"/>
+        <pin num="3" name="RA1/ANA1/C1IN1-/C2IN1-/CLCIN1/IOCA1" type="bidirectional"/>
+        <pin num="4" name="RA2/ANA2/VREF-/DAC1OUT1/C1IN0+/C2IN0+/IOCA2" type="bidirectional"/>
+        <pin num="5" name="RA3/ANA3/VREF+/C1IN1+/MDCARL/IOCA3" type="bidirectional"/>
+        <pin num="6" name="RA4/ANA4/MDCARH/T0CKI/CCP5/IOCA4" type="bidirectional"/>
+        <pin num="7" name="RA5/ANA5/SS1/MDSRC/IOCA5" type="bidirectional"/>
+        <pin num="8" name="RE0/ANE0" type="bidirectional"/>
+        <pin num="9" name="RE1/ANE1" type="bidirectional"/>
+        <pin num="10" name="RE2/ANE2" type="bidirectional"/>
+        <pin num="11" name="VDD" type="power_in"/>
+        <pin num="12" name="VSS" type="power_in"/>
+        <pin num="13" name="RA7/ANA7/IOCA7/OSC1_CLKIN" type="bidirectional"/>
+        <pin num="14" name="RA6/ANA6/IOCA6/OSC2_CLKOUT" type="bidirectional"/>
+        <pin num="15" name="RC0/ANC0/T1CKI/T3CKI/T3G/SMTWIN1/IOCC0/SOSCO" type="bidirectional"/>
+        <pin num="16" name="RC1/ANC1/SMTSIG1/CCP2/IOCC1/SOSCI" type="bidirectional"/>
+        <pin num="17" name="RC2/ANC2/T5CKI/CCP1/IOCC2" type="bidirectional"/>
+        <pin num="18" name="RC3/ANC3/SCL1/SCK1/T2IN/IOCC3" type="bidirectional"/>
+        <pin num="19" name="RD0/AND0" type="bidirectional"/>
+        <pin num="20" name="RD1/AND1" type="bidirectional"/>
+        <pin num="21" name="RD2/AND2" type="bidirectional"/>
+        <pin num="22" name="RD3/AND3" type="bidirectional"/>
+        <pin num="23" name="RC4/ANC4/SDA1/SDI1/IOCC4" type="bidirectional"/>
+        <pin num="24" name="RC5/ANC5/T4IN/IOCC5" type="bidirectional"/>
+        <pin num="25" name="RC6/ANC6/CK/IOCC6" type="bidirectional"/>
+        <pin num="26" name="RC7/ANC7/RX/DT/IOCC7" type="bidirectional"/>
+        <pin num="27" name="RD4/AND4" type="bidirectional"/>
+        <pin num="28" name="RD5/AND5" type="bidirectional"/>
+        <pin num="29" name="RD6/AND6" type="bidirectional"/>
+        <pin num="30" name="RD7/AND7" type="bidirectional"/>
+        <pin num="31" name="VSS" type="power_in"/>
+        <pin num="32" name="VDD" type="power_in"/>
+        <pin num="33" name="RB0/ANB0/C2IN1+/ZCD/SS2/CCP4/CWG1IN//INT_IOCB0" type="bidirectional"/>
+        <pin num="34" name="RB1/ANB1/C1IN3-/C2IN3-/SCL2/SCK2/CWG2IN/IOCB1" type="bidirectional"/>
+        <pin num="35" name="RB2/ANB2/SDA2/SDI2/CWG3IN/IOCB2" type="bidirectional"/>
+        <pin num="36" name="RB3/ANB3/C1IN2-/C2IN2-/IOCB3" type="bidirectional"/>
+        <pin num="37" name="RB4/ANB4/ADCACT/T5G/SMTWIN2/IOCB4" type="bidirectional"/>
+        <pin num="38" name="RB5/ANB5/T1G/SMTSIG2/CCP3/IOCB5" type="bidirectional"/>
+        <pin num="39" name="RB6/ANB6/CLCIN2/IOCB6/ICSPCLK" type="bidirectional"/>
+        <pin num="40" name="RB7/ANB7/DAC1OUT2/T6IN/CLCIN3/IOCB7/ICSPDAT" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="EEPROM Programmer-rescue" part="USB_B_Micro-Connector">
+      <footprints>
+        <fp>USB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_USB_B_Micro</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="power_out"/>
+        <pin num="2" name="D-" type="passive"/>
+        <pin num="3" name="D+" type="passive"/>
+        <pin num="4" name="ID" type="passive"/>
+        <pin num="5" name="GND" type="power_out"/>
+        <pin num="6" name="Shield" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface_USB" part="MCP2221AxP">
+      <description>USB to I2C/UART Protocol Converter with GPIO, DIP-14</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/20005565B.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP2221AxP</field>
+        <field name="Footprint">Package_DIP:DIP-14_W7.62mm</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/20005565B.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="GP0" type="bidirectional"/>
+        <pin num="3" name="GP1" type="bidirectional"/>
+        <pin num="4" name="~{RST}" type="input"/>
+        <pin num="5" name="URx" type="input"/>
+        <pin num="6" name="UTx" type="output"/>
+        <pin num="7" name="GP2" type="bidirectional"/>
+        <pin num="8" name="GP3" type="bidirectional"/>
+        <pin num="9" name="SDA" type="bidirectional"/>
+        <pin num="10" name="SCL" type="bidirectional"/>
+        <pin num="11" name="VUSB" type="passive"/>
+        <pin num="12" name="D-" type="bidirectional"/>
+        <pin num="13" name="D+" type="bidirectional"/>
+        <pin num="14" name="VSS" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="EEPROM Programmer-rescue">
+      <uri>/Users/dysvir/Documents/Bread_Board_Z80_Project/Bread Board Z80 Project/EEPROM Programmer/EEPROM Programmer/EEPROM Programmer-rescue.kicad_sym</uri>
+    </library>
+    <library logical="Interface_USB">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Interface_USB.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Switch.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="VBUS" pintype="power_out"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U1" pin="32" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U2" pin="28" pinfunction="VCC" pintype="bidirectional"/>
+      <node ref="U3" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U3" pin="11" pinfunction="VUSB" pintype="passive"/>
+    </net>
+    <net code="2" name="/A0">
+      <node ref="U1" pin="2" pinfunction="RA0/ANA0/C1IN0-/C2IN0-/CLCIN0/IOCA0" pintype="bidirectional"/>
+    </net>
+    <net code="3" name="/A1">
+      <node ref="U1" pin="3" pinfunction="RA1/ANA1/C1IN1-/C2IN1-/CLCIN1/IOCA1" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/A2">
+      <node ref="U1" pin="4" pinfunction="RA2/ANA2/VREF-/DAC1OUT1/C1IN0+/C2IN0+/IOCA2" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/A3">
+      <node ref="U1" pin="5" pinfunction="RA3/ANA3/VREF+/C1IN1+/MDCARL/IOCA3" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/A4">
+      <node ref="U1" pin="6" pinfunction="RA4/ANA4/MDCARH/T0CKI/CCP5/IOCA4" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="/A5">
+      <node ref="U1" pin="7" pinfunction="RA5/ANA5/SS1/MDSRC/IOCA5" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="/A6">
+      <node ref="U1" pin="14" pinfunction="RA6/ANA6/IOCA6/OSC2_CLKOUT" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="/A7">
+      <node ref="U1" pin="13" pinfunction="RA7/ANA7/IOCA7/OSC1_CLKIN" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/A8">
+      <node ref="U1" pin="15" pinfunction="RC0/ANC0/T1CKI/T3CKI/T3G/SMTWIN1/IOCC0/SOSCO" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="/A9">
+      <node ref="U1" pin="16" pinfunction="RC1/ANC1/SMTSIG1/CCP2/IOCC1/SOSCI" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="/A10">
+      <node ref="U1" pin="17" pinfunction="RC2/ANC2/T5CKI/CCP1/IOCC2" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="/A11">
+      <node ref="U1" pin="18" pinfunction="RC3/ANC3/SCL1/SCK1/T2IN/IOCC3" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="/A12">
+      <node ref="U1" pin="23" pinfunction="RC4/ANC4/SDA1/SDI1/IOCC4" pintype="bidirectional"/>
+    </net>
+    <net code="15" name="/A13">
+      <node ref="U1" pin="24" pinfunction="RC5/ANC5/T4IN/IOCC5" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="/A14">
+      <node ref="U1" pin="25" pinfunction="RC6/ANC6/CK/IOCC6" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="/ICSPCLK">
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="U1" pin="39" pinfunction="RB6/ANB6/CLCIN2/IOCB6/ICSPCLK" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="/ICSPDAT">
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="40" pinfunction="RB7/ANB7/DAC1OUT2/T6IN/CLCIN3/IOCB7/ICSPDAT" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="/LVP">
+      <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
+    </net>
+    <net code="20" name="/MCLR">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="RE3/IOCE3/!MCLR!/VPP" pintype="bidirectional"/>
+    </net>
+    <net code="21" name="GND">
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="ID" pintype="passive"/>
+      <node ref="J2" pin="5" pinfunction="GND" pintype="power_out"/>
+      <node ref="J2" pin="6" pinfunction="Shield" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U1" pin="31" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U2" pin="14" pinfunction="GND" pintype="bidirectional"/>
+      <node ref="U3" pin="14" pinfunction="VSS" pintype="power_in"/>
+    </net>
+    <net code="22" name="Net-(D1-A)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U3" pin="7" pinfunction="GP2" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="Net-(D1-K)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(D2-A)">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U3" pin="2" pinfunction="GP0" pintype="bidirectional"/>
+    </net>
+    <net code="25" name="Net-(D2-K)">
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(J2-D+)">
+      <node ref="J2" pin="3" pinfunction="D+" pintype="passive"/>
+      <node ref="U3" pin="13" pinfunction="D+" pintype="bidirectional"/>
+    </net>
+    <net code="27" name="Net-(J2-D-)">
+      <node ref="J2" pin="2" pinfunction="D-" pintype="passive"/>
+      <node ref="U3" pin="12" pinfunction="D-" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="Net-(U1-RB4{slash}ANB4{slash}ADCACT{slash}T5G{slash}SMTWIN2{slash}IOCB4)">
+      <node ref="U1" pin="37" pinfunction="RB4/ANB4/ADCACT/T5G/SMTWIN2/IOCB4" pintype="bidirectional"/>
+      <node ref="U3" pin="6" pinfunction="UTx" pintype="output"/>
+    </net>
+    <net code="29" name="Net-(U1-RB5{slash}ANB5{slash}T1G{slash}SMTSIG2{slash}CCP3{slash}IOCB5)">
+      <node ref="U1" pin="38" pinfunction="RB5/ANB5/T1G/SMTSIG2/CCP3/IOCB5" pintype="bidirectional"/>
+      <node ref="U3" pin="5" pinfunction="URx" pintype="input"/>
+    </net>
+    <net code="30" name="Net-(U1-RD0{slash}AND0)">
+      <node ref="U1" pin="19" pinfunction="RD0/AND0" pintype="bidirectional"/>
+      <node ref="U2" pin="11" pinfunction="IO0" pintype="bidirectional"/>
+    </net>
+    <net code="31" name="Net-(U1-RD1{slash}AND1)">
+      <node ref="U1" pin="20" pinfunction="RD1/AND1" pintype="bidirectional"/>
+      <node ref="U2" pin="12" pinfunction="IO1" pintype="bidirectional"/>
+    </net>
+    <net code="32" name="Net-(U1-RD2{slash}AND2)">
+      <node ref="U1" pin="21" pinfunction="RD2/AND2" pintype="bidirectional"/>
+      <node ref="U2" pin="13" pinfunction="IO2" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="Net-(U1-RD3{slash}AND3)">
+      <node ref="U1" pin="22" pinfunction="RD3/AND3" pintype="bidirectional"/>
+      <node ref="U2" pin="15" pinfunction="IO3" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="Net-(U1-RD4{slash}AND4)">
+      <node ref="U1" pin="27" pinfunction="RD4/AND4" pintype="bidirectional"/>
+      <node ref="U2" pin="16" pinfunction="IO4" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="Net-(U1-RD5{slash}AND5)">
+      <node ref="U1" pin="28" pinfunction="RD5/AND5" pintype="bidirectional"/>
+      <node ref="U2" pin="17" pinfunction="IO5" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="Net-(U1-RD6{slash}AND6)">
+      <node ref="U1" pin="29" pinfunction="RD6/AND6" pintype="bidirectional"/>
+      <node ref="U2" pin="18" pinfunction="IO6" pintype="bidirectional"/>
+    </net>
+    <net code="37" name="Net-(U1-RD7{slash}AND7)">
+      <node ref="U1" pin="30" pinfunction="RD7/AND7" pintype="bidirectional"/>
+      <node ref="U2" pin="19" pinfunction="IO7" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="Net-(U1-RE0{slash}ANE0)">
+      <node ref="U1" pin="8" pinfunction="RE0/ANE0" pintype="bidirectional"/>
+      <node ref="U2" pin="27" pinfunction="~{WE}" pintype="bidirectional"/>
+    </net>
+    <net code="39" name="Net-(U1-RE1{slash}ANE1)">
+      <node ref="U1" pin="9" pinfunction="RE1/ANE1" pintype="bidirectional"/>
+      <node ref="U2" pin="20" pinfunction="~{CE}" pintype="bidirectional"/>
+    </net>
+    <net code="40" name="Net-(U1-RE2{slash}ANE2)">
+      <node ref="U1" pin="10" pinfunction="RE2/ANE2" pintype="bidirectional"/>
+      <node ref="U2" pin="22" pinfunction="~{OE}" pintype="bidirectional"/>
+    </net>
+    <net code="41" name="unconnected-(U1-RB0{slash}ANB0{slash}C2IN1+{slash}ZCD{slash}SS2{slash}CCP4{slash}CWG1IN{slash}{slash}INT_IOCB0-Pad33)">
+      <node ref="U1" pin="33" pinfunction="RB0/ANB0/C2IN1+/ZCD/SS2/CCP4/CWG1IN//INT_IOCB0" pintype="bidirectional"/>
+    </net>
+    <net code="42" name="unconnected-(U1-RB1{slash}ANB1{slash}C1IN3-{slash}C2IN3-{slash}SCL2{slash}SCK2{slash}CWG2IN{slash}IOCB1-Pad34)">
+      <node ref="U1" pin="34" pinfunction="RB1/ANB1/C1IN3-/C2IN3-/SCL2/SCK2/CWG2IN/IOCB1" pintype="bidirectional"/>
+    </net>
+    <net code="43" name="unconnected-(U1-RB2{slash}ANB2{slash}SDA2{slash}SDI2{slash}CWG3IN{slash}IOCB2-Pad35)">
+      <node ref="U1" pin="35" pinfunction="RB2/ANB2/SDA2/SDI2/CWG3IN/IOCB2" pintype="bidirectional"/>
+    </net>
+    <net code="44" name="unconnected-(U1-RB3{slash}ANB3{slash}C1IN2-{slash}C2IN2-{slash}IOCB3-Pad36)">
+      <node ref="U1" pin="36" pinfunction="RB3/ANB3/C1IN2-/C2IN2-/IOCB3" pintype="bidirectional"/>
+    </net>
+    <net code="45" name="unconnected-(U1-RC7{slash}ANC7{slash}RX{slash}DT{slash}IOCC7-Pad26)">
+      <node ref="U1" pin="26" pinfunction="RC7/ANC7/RX/DT/IOCC7" pintype="bidirectional"/>
+    </net>
+    <net code="46" name="unconnected-(U2-A0-Pad10)">
+      <node ref="U2" pin="10" pinfunction="A0" pintype="bidirectional"/>
+    </net>
+    <net code="47" name="unconnected-(U2-A1-Pad9)">
+      <node ref="U2" pin="9" pinfunction="A1" pintype="bidirectional"/>
+    </net>
+    <net code="48" name="unconnected-(U2-A2-Pad8)">
+      <node ref="U2" pin="8" pinfunction="A2" pintype="bidirectional"/>
+    </net>
+    <net code="49" name="unconnected-(U2-A3-Pad7)">
+      <node ref="U2" pin="7" pinfunction="A3" pintype="bidirectional"/>
+    </net>
+    <net code="50" name="unconnected-(U2-A4-Pad6)">
+      <node ref="U2" pin="6" pinfunction="A4" pintype="bidirectional"/>
+    </net>
+    <net code="51" name="unconnected-(U2-A5-Pad5)">
+      <node ref="U2" pin="5" pinfunction="A5" pintype="bidirectional"/>
+    </net>
+    <net code="52" name="unconnected-(U2-A6-Pad4)">
+      <node ref="U2" pin="4" pinfunction="A6" pintype="bidirectional"/>
+    </net>
+    <net code="53" name="unconnected-(U2-A7-Pad3)">
+      <node ref="U2" pin="3" pinfunction="A7" pintype="bidirectional"/>
+    </net>
+    <net code="54" name="unconnected-(U2-A8-Pad25)">
+      <node ref="U2" pin="25" pinfunction="A8" pintype="bidirectional"/>
+    </net>
+    <net code="55" name="unconnected-(U2-A9-Pad24)">
+      <node ref="U2" pin="24" pinfunction="A9" pintype="bidirectional"/>
+    </net>
+    <net code="56" name="unconnected-(U2-A10-Pad21)">
+      <node ref="U2" pin="21" pinfunction="A10" pintype="bidirectional"/>
+    </net>
+    <net code="57" name="unconnected-(U2-A11-Pad23)">
+      <node ref="U2" pin="23" pinfunction="A11" pintype="bidirectional"/>
+    </net>
+    <net code="58" name="unconnected-(U2-A12-Pad2)">
+      <node ref="U2" pin="2" pinfunction="A12" pintype="bidirectional"/>
+    </net>
+    <net code="59" name="unconnected-(U2-A13-Pad26)">
+      <node ref="U2" pin="26" pinfunction="A13" pintype="bidirectional"/>
+    </net>
+    <net code="60" name="unconnected-(U2-A14-Pad1)">
+      <node ref="U2" pin="1" pinfunction="A14" pintype="bidirectional"/>
+    </net>
+    <net code="61" name="unconnected-(U3-GP1-Pad3)">
+      <node ref="U3" pin="3" pinfunction="GP1" pintype="bidirectional"/>
+    </net>
+    <net code="62" name="unconnected-(U3-GP3-Pad8)">
+      <node ref="U3" pin="8" pinfunction="GP3" pintype="bidirectional"/>
+    </net>
+    <net code="63" name="unconnected-(U3-SCL-Pad10)">
+      <node ref="U3" pin="10" pinfunction="SCL" pintype="bidirectional"/>
+    </net>
+    <net code="64" name="unconnected-(U3-SDA-Pad9)">
+      <node ref="U3" pin="9" pinfunction="SDA" pintype="bidirectional"/>
+    </net>
+    <net code="65" name="unconnected-(U3-~{RST}-Pad4)">
+      <node ref="U3" pin="4" pinfunction="~{RST}" pintype="input"/>
+    </net>
+  </nets>
+</export>

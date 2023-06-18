@@ -23,13 +23,9 @@ Plug 'sheerun/vim-polyglot'
 " Tab / spaces visual
 Plug 'Yggdroot/indentLine'
 
-Plug 'gabrielelana/vim-markdown'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-Plug 'sebdah/vim-delve'
-
-Plug 'SirVer/ultisnips'
 
 Plug 'scrooloose/nerdtree'
 
@@ -164,10 +160,8 @@ augroup vimGo
 augroup END
 " #################### Importing extra files ###################################
 
-
-
-
-
+let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_github=1
 
 try
     source $HOME/.vimrcExtra

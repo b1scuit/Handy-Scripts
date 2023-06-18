@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Bread Board Z80 Project-rescue")(type "KiCad")(uri "${KIPRJMOD}/Bread Board Z80 Project-rescue.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,22 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 8500 3850 2000 1450
+U 5F0C6E9C
+F0 "CPU Board" 50
+F1 "CPU Board.sch" 50
+$EndSheet
+$EndSCHEMATC
