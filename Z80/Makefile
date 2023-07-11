@@ -10,3 +10,6 @@ message.sna:
 	sjasmplus --lst ./test/message.asm
 stack.sna:
 	sjasmplus --lst ./test/stack.asm
+
+zsim/example.sna:
+	sjasmplus --lst ./zsim/example.asm
