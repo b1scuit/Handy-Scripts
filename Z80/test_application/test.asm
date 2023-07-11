@@ -1,7 +1,7 @@
 LED_ADDR    .EQU $0000
 LED_INIT    .EQU $02; INIT 4-bit mode
 LED_4BIT    .EQU $28; Initialization of 16X2 LCD in 4bit mode
-LED_ENABLE  .EQU $0C; Enable Display, Disable Cursor
+LED_ENABLE  .EQU $0E; Enable Display, Disable Cursor
 LED_INCCUR  .EQU $06; Auto Increment cursor
 LED_CLRDIS  .EQU $01; Clear Display
 LED_CURHOM  .EQU $80; Cursor at home position
