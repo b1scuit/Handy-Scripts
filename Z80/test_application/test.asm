@@ -70,6 +70,7 @@ SENDDATA:
     POP AF
     RLA ; Rotate left then right to knock the 8th bit as 0
     RRA
+    OUT (LED_ADDR), A ; Send command to LCD screen
     RET
 
 INTRO: .BYTE  16,"Hello Z80 World!"
