@@ -28,6 +28,16 @@ INIT:
     LD B,LED_CURHOM
     CALL SENDCMD
 
+    LD   HL,INTRO
+    LD   B,(HL)
+LOOP:
+    INC  HL
+    LD   A,(HL)
+    CALL SENDDATA
+    DJNZ LOOP
+END:
+    HALT
+
 SENDCMD:
     PUSH AF
     ; Send Upper nibble (4 bytes first)
@@ -64,3 +74,4 @@ SENDDATA:
     POP AF
     RET
 
+INTRO: .BYTE  16,"Hello Z80 World!"
