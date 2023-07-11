@@ -41,6 +41,8 @@ SENDCMD:
     NOP
     ; Send Lower Mibble (4 bytes last)
     LD A,B
+    RLA ; Rotate left then right to knock the 8th bit as 0
+    RRA
     ADD $80 ; Turn on command register
     OUT (LED_ADDR), A
     POP AF
