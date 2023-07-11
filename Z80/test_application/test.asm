@@ -26,7 +26,9 @@ INIT:
     CALL SENDCMD
     LD A,$30
     CALL SENDCMD
-    LD A, $38
+    LD A,$20
+    CALL SENDCMD
+    LD A, $28
     CALL SENDCMD
 
     LD A, LED_DISPLAY_OFF
@@ -40,7 +42,7 @@ INIT:
     LD A,$02
     CALL SENDCMD
 
-    LD A,$0C
+    LD A,$0F
     CALL SENDCMD
 
     ; LD A,LED_INIT
