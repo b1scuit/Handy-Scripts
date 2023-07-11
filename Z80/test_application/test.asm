@@ -60,7 +60,6 @@ SENDCMD:
 SENDDATA:
     PUSH AF
     ; Send Upper nibble (4 bytes first)
-    LD A,B
     RRA
     RRA
     RRA
@@ -68,10 +67,9 @@ SENDDATA:
     OUT (LED_ADDR), A ; Send command to LCD screen
     NOP
     ; Send Lower Mibble (4 bytes last)
-    LD A,B
+    POP AF
     RLA ; Rotate left then right to knock the 8th bit as 0
     RRA
-    POP AF
     RET
 
 INTRO: .BYTE  16,"Hello Z80 World!"
