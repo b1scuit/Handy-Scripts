@@ -1,8 +1,4 @@
 LED_ADDR    .EQU $0000
-
-LED_INIT_FUNCTION_SET .EQU $30
-LED_INIT_NEXT_SET .EQU $38
-
 LED_INIT    .EQU $14; Function Set
 LED_ENABLE  .EQU $0F; Display ON/Off
 LED_INCCUR  .EQU $07; Entry Mode eset
@@ -44,17 +40,6 @@ INIT:
 
     LD A,$0F
     CALL SENDCMD
-
-    ; LD A,LED_INIT
-    ; CALL SENDCMD
-    ; LD A,LED_ENABLE
-    ; CALL SENDCMD
-    ; LD A,LED_INCCUR
-    ; CALL SENDCMD
-    ; LD A,LED_CLRDIS
-    ; CALL SENDCMD
-    ; LD A,LED_CURHOM
-    ; CALL SENDCMD
 
     LD   HL,INTRO
     LD   B,(HL)
