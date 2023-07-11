@@ -15,23 +15,23 @@ RST00:
 INIT:
     LD HL,$80ED
     LD SP,HL
-    LD HL,LED_INIT
+    LD B,LED_INIT
     CALL SENDCMD
-    LD HL,LED_4BIT
+    LD B,LED_4BIT
     CALL SENDCMD
-    LD HL,LED_ENABLE
+    LD B,LED_ENABLE
     CALL SENDCMD
-    LD HL,LED_INCCUR
+    LD B,LED_INCCUR
     CALL SENDCMD
-    LD HL,LED_CLRDIS
+    LD B,LED_CLRDIS
     CALL SENDCMD
-    LD HL,LED_CURHOM
+    LD B,LED_CURHOM
     CALL SENDCMD
 
 SENDCMD:
     PUSH AF
     ; Send Upper nibble (4 bytes first)
-    LD A,$(HL)
+    LD A,B
     RRA
     RRA
     RRA
@@ -40,7 +40,7 @@ SENDCMD:
     OUT (LED_ADDR), A ; Send command to LCD screen
     NOP
     ; Send Lower Mibble (4 bytes last)
-    LD A,$(HL)
+    LD A,B
     ADD $80 ; Turn on command register
     OUT (LED_ADDR), A
     POP AF
@@ -48,7 +48,7 @@ SENDCMD:
 SENDDATA:
     PUSH AF
     ; Send Upper nibble (4 bytes first)
-    LD A,$(HL)
+    LD A,B
     RRA
     RRA
     RRA
@@ -56,7 +56,7 @@ SENDDATA:
     OUT (LED_ADDR), A ; Send command to LCD screen
     NOP
     ; Send Lower Mibble (4 bytes last)
-    LD A,$(HL)
+    LD A,B
     RLA ; Rotate left then right to knock the 8th bit as 0
     RRA
     POP AF
