@@ -45,14 +45,12 @@ SENDCMD:
     RRA
     RRA
     RRA
-    ADD $80 ; Turn on command register
     OUT (LED_ADDR), A ; Send command to LCD screen
     NOP
     ; Send Lower Mibble (4 bytes last)
     POP AF
     RLA ; Rotate left then right to knock the 8th bit as 0
     RRA
-    ADD $80 ; Turn on command register
     OUT (LED_ADDR), A
     RET
 SENDDATA:
@@ -62,12 +60,14 @@ SENDDATA:
     RRA
     RRA
     RRA
+    ADD $80 ; Turn on command register
     OUT (LED_ADDR), A ; Send command to LCD screen
     NOP
     ; Send Lower Mibble (4 bytes last)
     POP AF
     RLA ; Rotate left then right to knock the 8th bit as 0
     RRA
+    ADD $80 ; Turn on command register
     OUT (LED_ADDR), A ; Send command to LCD screen
     RET
 
