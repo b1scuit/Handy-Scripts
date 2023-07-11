@@ -42,6 +42,7 @@ SENDCMD:
     ; Send Lower Mibble (4 bytes last)
     LD A,$(HL)
     ADD $80 ; Turn on command register
+    OUT (LED_ADDR), A
     POP AF
     RET
 SENDDATA:
