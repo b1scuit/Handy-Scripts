@@ -63,6 +63,7 @@ init_2400h:
     ld a, led_clrdis
     call sendcmd
     ld a, led_curhom
+    call sendcmd
     ret
 
 sendcmd:
