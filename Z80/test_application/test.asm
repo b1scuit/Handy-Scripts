@@ -43,9 +43,6 @@ init_splc780d:
     ld a, $28
     call sendcmd
 
-    ld a, led_display_off
-    call sendcmd
-
     ld a, led_clrdis
     call sendcmd
 
