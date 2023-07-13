@@ -74,4 +74,4 @@ senddata:
     ret
 
 intro:      .db  "Hello Z80 World! "
-intro_len:  .equ $ - intro
+intro_len   .equ $ - intro
