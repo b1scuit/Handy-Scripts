@@ -21,6 +21,7 @@ init:
 
     call init_2400h
 
+start_msg:
     ld   hl,intro
     ld   b,(hl)
 loop:
@@ -28,33 +29,8 @@ loop:
     ld   a,(hl)
     call senddata
     djnz loop
-end:
-    halt
-init_splc780d:
-    ; For some reason we have to send $30 x3 times
-    ld a,$30
-    call sendcmd
-    ld a,$30
-    call sendcmd
-    ld a,$30
-    call sendcmd
-    ld a,$20
-    call sendcmd
-    ld a, $28
-    call sendcmd
 
-    ld a, led_clrdis
-    call sendcmd
-
-    ld a,$06
-    call sendcmd
-    ld a,$02
-    call sendcmd
-
-    ld a,$0f
-    call sendcmd
-    ret
-
+    jr start_msg; Retart
 init_2400h:
     ld a, led_init
     call sendcmd
@@ -97,4 +73,4 @@ senddata:
     out (led_addr), a ; Send command to LCD screen
     ret
 
-intro: .db  16,"Hello Z80 World!"
+intro: .db  16,"Hello Z80 World! "
