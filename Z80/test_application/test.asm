@@ -46,7 +46,7 @@ INIT:
     LD A,$02
     LD A,$28
     LD A,$0E
-    LS A,LED_INCCUR
+    LD A,LED_INCCUR
     LD A,LED_CLRDIS
     LD A,$80
 
