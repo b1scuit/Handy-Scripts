@@ -1,98 +1,90 @@
-LED_ADDR        .EQU $0000
-LED_INIT        .EQU $14; Function Set
-LED_ENABLE      .EQU $0F; Display ON/Off
-LED_INCCUR      .EQU $07; Entry Mode eset
-LED_CLRDIS      .EQU $01; Clear Display
-LED_CURHOM      .EQU $02; Return home
-LED_DISPLAY_OFF .EQU $08
-LED_INIT_
+led_addr        .equ $0000
+led_init        .equ $14; Function Set
+led_enable      .equ $0f; Display ON/OFF
+led_inccur      .equ $07; Entry Mode eset
+led_clrdis      .equ $01; Clear Display
+led_curhom      .equ $02; Return home
+led_display_off .equ $08
 
-    .ORG $0000
-RST00:
-    DI
-    JP INIT
+    .org $0000
+rst00:
+    di
+    jp init
 
-    .ORG $0040 ; Safe place to start
-INIT:
-    LD HL,$80ED ; Sort out the stack pointer
-    LD SP,HL
+    .org $0040 ; Safe place to start
+init:
+    ld hl,$80ed ; Sort out the stack pointer
+    ld sp,hl
 
-; ; For some reason we have to send $30 x3 times
-; LD A,$30
-; CALL SENDCMD
-; LD A,$30
-; CALL SENDCMD
-; LD A,$30
-; CALL SENDCMD
-; LD A,$20
-; CALL SENDCMD
-; LD A, $28
-; CALL SENDCMD
+    ; For some reason we have to send $30 x3 times
+    ld a,$30
+    call sendcmd
+    ld a,$30
+    call sendcmd
+    ld a,$30
+    call sendcmd
+    ld a,$20
+    call sendcmd
+    ld a, $28
+    call sendcmd
 
-; LD A, LED_DISPLAY_OFF
-; CALL SENDCMD
+    ld a, led_display_off
+    call sendcmd
 
-; LD A, LED_CLRDIS
-; CALL SENDCMD
+    ld a, led_clrdis
+    call sendcmd
 
-; LD A,$06
-; CALL SENDCMD
-; LD A,$02
-; CALL SENDCMD
+    ld a,$06
+    call sendcmd
+    ld a,$02
+    call sendcmd
 
-; LD A,$0F
-; CALL SENDCMD
+    ld a,$0f
+    call sendcmd
 
-    LD A,$02
-    LD A,$28
-    LD A,$0E
-    LD A,LED_INCCUR
-    LD A,LED_CLRDIS
-    LD A,$80
+    ld   hl,intro
+    ld   b,(hl)
+loop:
+    inc  hl
+    ld   a,(hl)
+    call senddata
+    djnz loop
+end:
+    halt
 
-    LD   HL,INTRO
-    LD   B,(HL)
-LOOP:
-    INC  HL
-    LD   A,(HL)
-    CALL SENDDATA
-    DJNZ LOOP
-END:
-    HALT
-
-SENDCMD:
-    PUSH AF
+sendcmd:
+    push af
     ; Send Upper nibble (4 bytes first)
-    RRA
-    RRA
-    RRA
-    RRA
-    RES 7,A
-    OUT (LED_ADDR), A ; Send command to LCD screen
-    NOP
+    rra
+    rra
+    rra
+    rra
+    res 7,a
+    out (led_addr), a ; Send command to LCD screen
+    nop
     ; Send Lower Mibble (4 bytes last)
-    POP AF
-    RLA ; Rotate left then right to knock the 8th bit as 0
-    RRA
-    RES 7,A
-    OUT (LED_ADDR), A
-    RET
-SENDDATA:
-    PUSH AF
+    pop af
+    rla ; Rotate left then right to knock the 8th bit as 0
+    rra
+    res 7,a
+    out (led_addr), a
+    ret
+senddata:
+    push af
     ; Send Upper nibble (4 bytes first)
-    RRA
-    RRA
-    RRA
-    RRA
-    SET 7, A
-    OUT (LED_ADDR), A ; Send command to LCD screen
-    NOP
+    rra
+    rra
+    rra
+    rra
+    set 7, a
+    out (led_addr), a ; Send command to LCD screen
+    nop
     ; Send Lower Mibble (4 bytes last)
-    POP AF
-    RLA ; Rotate left then right to knock the 8th bit as 0
-    RRA
-    SET 7, A
-    OUT (LED_ADDR), A ; Send command to LCD screen
-    RET
+    pop af
+    rla ; Rotate left then right to knock the 8th bit as 0
+    rra
+    set 7, a
+    out (led_addr), a ; Send command to LCD screen
+    ret
 
-INTRO: .BYTE  16,"Hello Z80 World!"
+intro: .byte  16,"Hello Z80 World!"
