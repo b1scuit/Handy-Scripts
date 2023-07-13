@@ -23,11 +23,11 @@ init:
 
 start_msg:
     ld   hl,intro
-    ld   b,(hl)
+    ld   b,intro_len
 loop:
-    inc  hl
     ld   a,(hl)
     call senddata
+    inc  hl
     djnz loop
 
     jr start_msg; Restart
@@ -73,4 +73,5 @@ senddata:
     out (led_addr), a ; Send command to LCD screen
     ret
 
-intro: .db  18,"Hello Z80 World! "
+intro:      .db  "Hello Z80 World! "
+intro_len:  .equ $ - intro
