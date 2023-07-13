@@ -30,7 +30,7 @@ loop:
     call senddata
     djnz loop
 
-    jr start_msg; Retart
+    jr start_msg; Restart
 init_2400h:
     ld a, led_init
     call sendcmd
@@ -73,4 +73,4 @@ senddata:
     out (led_addr), a ; Send command to LCD screen
     ret
 
-intro: .db  16,"Hello Z80 World! "
+intro: .db  18,"Hello Z80 World! "
