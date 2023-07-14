@@ -1,7 +1,7 @@
 all: a.out
 
 a.out:
-	vasm -Fbin -dotdir test.asm
+	vasm -Fbin -L a.lst -dotdir test.asm
 
 .PHONY: view
 view:
